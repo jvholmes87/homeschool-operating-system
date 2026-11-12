@@ -1,0 +1,18 @@
+# Nothing real belongs in this repository.
+# Student records, curriculum content and generated packets live elsewhere.
+
+*.pyc
+__pycache__/
+.venv/
+venv/
+
+# generated output, except the committed samples
+samples/*.png
+
+# guard rails: never commit real data
+real_data.py
+*_real.py
+/private/
+/students/
+*.ods
+*.xlsx
