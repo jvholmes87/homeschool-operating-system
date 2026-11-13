@@ -6,6 +6,12 @@ Built and operated for a Grade 4 accredited video curriculum, 2026–27. This re
 documents the operating model, the document-generation pipeline and the spreadsheet
 automation — the method, not the coursework.
 
+> **This case study does not claim better academic outcomes than conventional school.**
+> One student, no control group, no counterfactual. The research literature does not
+> support that claim either — including, explicitly, the field's leading pro-homeschooling
+> research body. What is claimed, and why the narrower claim is the stronger one, is set
+> out in [`docs/07-claims-and-limits.md`](docs/07-claims-and-limits.md).
+
 > **No curriculum content is in this repository.** Word lists, quiz items, answer keys,
 > grading tables and lesson text belong to the curriculum publisher and are not reproduced
 > here. Every example uses an invented student and an invented word list. Student records
@@ -55,6 +61,25 @@ That one fact drives the whole document architecture:
 Anything that must be *heard* to be graded — oral reading, recitation — is either done with
 the marker present or recorded and sent to him. A supervisor never guesses at a grade.
 
+### The week, not just the school day
+
+The programme is not the whole of the student's week, and a model that ignores the rest of
+it is not describing anything real. Reported as **hours by category** — never as days,
+times, named organisations or locations, because this is a public document about a child:
+
+| | Hours per week |
+|---|---|
+| Core instruction, 5 days | 19.6 – 26.7 |
+| Academic tutoring (mathematics, second language), 3×/week | 9 – 12 |
+| Scouting, one meeting | 1.5 – 2 |
+| Sports club | 1.5 – 2 |
+| Youth sports, 2 practices + 1 game, seasonal | 3 – 4.5 |
+
+Against a US public elementary benchmark of **32.1 hours in school per week, of which 21.8
+is core instruction.** Core load is comparable; the recovered time is the third of the
+public week that is not instruction. Full working in
+[`docs/06-time-and-coverage.md`](docs/06-time-and-coverage.md).
+
 ### Three documents a day
 
 | Document | Audience | Language | Why separate |
@@ -89,6 +114,8 @@ docs/
   03-tracker-automation.md    Apps Script patterns, and the bugs that taught them
   04-rendering-constraints.md WeasyPrint behaviour discovered the hard way
   05-metrics.md               tracked-but-not-graded measures, and honest flags
+  06-time-and-coverage.md     measured hours against a public elementary benchmark
+  07-claims-and-limits.md     what this claims, what it does not, and what gets reported
 generators/
   style.css                   shared stylesheet: page, type, subject colour system
   packet.py                   student packet -> A4 PDF
@@ -206,7 +233,9 @@ the second is the honest number.
 
 ## Outcomes
 
-Measured over the first grading period:
+**Operational** outcomes over the first grading period. These are facts about running the
+programme, not evidence that the model produces better learning — see
+[`docs/07-claims-and-limits.md`](docs/07-claims-and-limits.md).
 
 - A grading period that had slipped roughly two weeks was re-baselined and brought back
   inside its due date with buffer to spare, without adding school days beyond one weekend
@@ -219,6 +248,10 @@ Measured over the first grading period:
 - Reported schedule drift fell to zero once the planned dates were corrected to the dates
   work was actually done — most of the "behind plan" figure was an artifact of a stale
   planning column, not real slippage.
+
+Academic results are third-party graded by the accrediting body and reported each grading
+period **whether or not they are good**. The measures were fixed in advance, so there is
+nothing to select afterwards; the list is in `07-claims-and-limits.md`.
 
 ---
 
