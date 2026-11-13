@@ -69,9 +69,20 @@ Everything else here is internal: hours we logged, grades the accrediting body a
 against its own curriculum. None of it can be set beside a public-school cohort.
 
 A **norm-referenced standardized test** can. Abeka supplies the Stanford 10 and the Iowa
-Tests, and accredited enrolment includes one free test per enrolment year. Both report a
+Tests, and accredited enrolment includes one free test per enrolment year. Either reports a
 percentile against a national sample, which is the only figure in this entire project that
 means anything to someone outside it.
+
+**This programme uses Iowa Form E**, and the reason is the comparison group rather than the
+test's reputation. Iowa's 2024 norms are built from roughly 4.6 million student records
+weighted to federal enrolment data — constructed to represent US students generally.
+Stanford 10's 2018 re-norming drew more heavily on private schools, where earlier editions
+had used mostly public school scores.
+
+That distinction decides what the published number can be used to say. A percentile means
+nothing without knowing who is in the denominator. Against Iowa's sample the claim is "this
+student, against American students." Against Stanford's it is "this student, against
+private-school students" — a narrower claim, and not the one being tested here.
 
 It will be sat once a year and **the percentile published whichever way it falls.** A
 programme that reports its own grades and quietly skips the external test is reporting
@@ -95,7 +106,7 @@ Stated before the results exist, so there is nothing to select afterwards:
 | Working hours per school day | Daily pacing log | Continuous |
 | Reading rate against comprehension | Timed quizzes | Each timed quiz |
 | Schedule slip: planned date vs actual | Tracker | Daily |
-| **Norm-referenced standardized test** — percentile against a national sample | Stanford 10 or Iowa, through the accrediting body | Once per enrolment year |
+| **Iowa Form E** — percentile against a national sample | Riverside, through the accrediting body | Once per enrolment year, each spring |
 
 **Scores are reported whether they are good or not.** A worked example already in this
 repository: a timed reading quiz returned 80, ten points below the same student's result a
