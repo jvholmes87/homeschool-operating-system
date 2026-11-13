@@ -1,8 +1,3 @@
----
-layout: default
-title: Tracker automation
----
-
 # 03 — Tracker automation (Google Apps Script)
 
 The spreadsheet is the record of account. Scripts maintain it. Every one of them is

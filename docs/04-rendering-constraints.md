@@ -1,8 +1,3 @@
----
-layout: default
-title: Rendering constraints
----
-
 # 04 — Rendering constraints (WeasyPrint → A4 PDF)
 
 Discovered by building several hundred pages. Not in the obvious documentation.

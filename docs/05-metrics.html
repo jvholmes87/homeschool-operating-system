@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metrics that are tracked but never graded &mdash; Homeschool Hub Weekly</title>
+<meta name="description" content="Metrics that are tracked but never graded. Part of an open operating model for accredited homeschooling.">
+<link rel="canonical" href="https://homeschoolhubweekly.com/docs/05-metrics.html">
+<style>
+  :root { --ink:#1d2228; --muted:#5d6672; --line:#d8dde3; --bg:#fbfcfd; --accent:#1c4f8f; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:0 18px 72px; background:var(--bg); color:var(--ink);
+         font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width:760px; margin:0 auto; }
+  nav { padding:22px 0 0; font-size:14.5px; }
+  nav a { color:var(--muted); text-decoration:none; }
+  nav a:hover { color:var(--accent); text-decoration:underline; }
+  h1 { font-size:31px; line-height:1.18; margin:18px 0 18px; letter-spacing:-0.3px; }
+  h2 { font-size:21px; margin:38px 0 10px; padding-bottom:6px; border-bottom:2px solid var(--line); }
+  h3 { font-size:17.5px; margin:26px 0 6px; }
+  a { color:var(--accent); }
+  table { width:100%; border-collapse:collapse; margin:14px 0; }
+  th,td { text-align:left; padding:8px 9px; border-bottom:1px solid var(--line); font-size:15.5px;
+          vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  code { background:#eef1f4; padding:1.5px 5px; border-radius:4px; font-size:14.5px; }
+  pre { background:#fff; border:1px solid var(--line); border-radius:8px; padding:14px 16px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; font-size:14px; line-height:1.5; }
+  blockquote { margin:16px 0; padding:12px 18px; border-left:4px solid var(--accent);
+               background:#fff; border-radius:0 8px 8px 0; color:var(--muted); }
+  blockquote p { margin:0 0 8px; } blockquote p:last-child { margin:0; }
+  ul,ol { padding-left:22px; } li { margin-bottom:7px; }
+  hr { border:0; border-top:1px solid var(--line); margin:34px 0; }
+  footer { margin-top:52px; padding-top:18px; border-top:1px solid var(--line);
+           font-size:14px; color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="../">&larr; Homeschool Hub Weekly</a></nav>
+<h1>05 — Metrics that are tracked but never graded</h1>
+<h2>The principle</h2>
+<p>Some measures are worth watching and must never affect a score. Reading rate is the
+canonical example: it diagnoses, it does not assess.</p>
+<p>Mixing them corrupts both. A student who knows speed is graded reads faster and
+comprehends less — trading away the thing that <em>is</em> graded for the thing that is merely
+measured.</p>
+<h2>Implementation</h2>
+<ol>
+<li><strong>Physical separation in the sheet.</strong> The metric lives in columns outside the graded
+   range. No average can reach it even by accident.</li>
+<li><strong>Stated on the student's own sheet</strong>, in plain words: <em>your reading speed is not part
+   of your grade, we just keep track of it.</em></li>
+<li><strong>Stated on the supervisor sheet</strong>, so nobody helpfully deducts for a slow time.</li>
+<li>Two typed inputs only — word count and elapsed time. Everything else is a formula.
+   Arithmetic done by hand is arithmetic done wrong eventually.</li>
+</ol>
+<h2>Banding</h2>
+<p>Bands are anchored to the <strong>publisher's own printed benchmarks</strong>, not invented:</p>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Floor</td>
+<td>the baseline printed on the student's own progress graph</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>the rate the teacher's notes allow for the grade level</td>
+</tr>
+<tr>
+<td>Ceiling</td>
+<td>the top of that graph's scale</td>
+</tr>
+</tbody>
+</table>
+<p>If you cannot point at where a threshold came from, you have invented a standard and
+attached authority to it.</p>
+<h2>Flags must not claim causation</h2>
+<p>A flag combining two signals — high rate, low score — is useful. The wording is where it
+goes wrong.</p>
+<p><code>Too fast — comprehension slipping</code> asserts a cause. The first two real data points
+destroyed it: 175 wpm scored 90, 177 wpm scored 80. Rate moved 2; score moved 10. The
+student was tired, which the numbers cannot show.</p>
+<p>The flag now reads <code>Check — fast pace, N missed</code>. Same trigger, no claim, and a <strong>Note
+column</strong> beside it for the condition.</p>
+<p><strong>A metric without its context becomes misleading the moment everyone forgets.</strong> Budget a
+free-text column next to every automated indicator. It is the cheapest thing in the system
+and the first thing omitted.</p>
+<h2>Trend before level</h2>
+<p>A single reading is noise. The sheet shows the change since the previous one, because the
+expectation is improvement over a year, not a number on a day.</p>
+<footer>
+<p>Part of <a href="../">an open operating model for accredited homeschooling</a> &mdash;
+source on <a href="https://github.com/jvholmes87/homeschool-operating-system">GitHub</a>.
+The student in this programme is never identified; see
+<a href="08-privacy-rules.html">the privacy rules</a>.</p>
+<p>No analytics, no cookies, no trackers.</p>
+</footer>
+</main>
+</body>
+</html>

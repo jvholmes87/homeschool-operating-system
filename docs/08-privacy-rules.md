@@ -1,8 +1,3 @@
----
-layout: default
-title: Privacy rules
----
-
 # 08 — Privacy rules for this repository
 
 Binding on every file here and on anything published from it. The student in this programme

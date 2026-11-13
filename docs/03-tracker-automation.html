@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tracker automation &mdash; Homeschool Hub Weekly</title>
+<meta name="description" content="Tracker automation. Part of an open operating model for accredited homeschooling.">
+<link rel="canonical" href="https://homeschoolhubweekly.com/docs/03-tracker-automation.html">
+<style>
+  :root { --ink:#1d2228; --muted:#5d6672; --line:#d8dde3; --bg:#fbfcfd; --accent:#1c4f8f; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:0 18px 72px; background:var(--bg); color:var(--ink);
+         font:16.5px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width:760px; margin:0 auto; }
+  nav { padding:22px 0 0; font-size:14.5px; }
+  nav a { color:var(--muted); text-decoration:none; }
+  nav a:hover { color:var(--accent); text-decoration:underline; }
+  h1 { font-size:31px; line-height:1.18; margin:18px 0 18px; letter-spacing:-0.3px; }
+  h2 { font-size:21px; margin:38px 0 10px; padding-bottom:6px; border-bottom:2px solid var(--line); }
+  h3 { font-size:17.5px; margin:26px 0 6px; }
+  a { color:var(--accent); }
+  table { width:100%; border-collapse:collapse; margin:14px 0; }
+  th,td { text-align:left; padding:8px 9px; border-bottom:1px solid var(--line); font-size:15.5px;
+          vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  code { background:#eef1f4; padding:1.5px 5px; border-radius:4px; font-size:14.5px; }
+  pre { background:#fff; border:1px solid var(--line); border-radius:8px; padding:14px 16px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; font-size:14px; line-height:1.5; }
+  blockquote { margin:16px 0; padding:12px 18px; border-left:4px solid var(--accent);
+               background:#fff; border-radius:0 8px 8px 0; color:var(--muted); }
+  blockquote p { margin:0 0 8px; } blockquote p:last-child { margin:0; }
+  ul,ol { padding-left:22px; } li { margin-bottom:7px; }
+  hr { border:0; border-top:1px solid var(--line); margin:34px 0; }
+  footer { margin-top:52px; padding-top:18px; border-top:1px solid var(--line);
+           font-size:14px; color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="../">&larr; Homeschool Hub Weekly</a></nav>
+<h1>03 — Tracker automation (Google Apps Script)</h1>
+<p>The spreadsheet is the record of account. Scripts maintain it. Every one of them is
+written on the assumption that <strong>it will be run against a sheet that has moved since the
+script was written</strong>, because it will be.</p>
+<h2>Rules</h2>
+<h3>1. Named functions</h3>
+<p>An IIFE gives the Run dropdown nothing to select. Obvious once it has cost you a round
+trip with someone who is not at a keyboard with you.</p>
+<pre><code class="language-javascript">function redateSchedule() { ... }   // yes
+(function () { ... })();            // the Run menu is empty
+</code></pre>
+<h3>2. Build dates at noon</h3>
+<pre><code class="language-javascript">function noon(y, m, d) { return new Date(y, m, d, 12, 0, 0); }
+</code></pre>
+<p>Midnight plus a timezone difference silently becomes the previous day. Noon survives every
+offset a spreadsheet will apply.</p>
+<h3>3. Locate by name, never by coordinate</h3>
+<p>Hardcoded <code>D7</code> is a time bomb. Someone inserts a column and the script writes authoritative
+nonsense into the wrong cell, with no error.</p>
+<pre><code class="language-javascript">function findExact(grid, want) {      // header text, exact match
+  want = want.toUpperCase();
+  for (var r = 0; r &lt; grid.length; r++)
+    for (var c = 0; c &lt; grid[r].length; c++)
+      if (String(grid[r][c]).trim().toUpperCase() === want)
+        return { r: r + 1, c: c + 1 };
+  return null;
+}
+</code></pre>
+<p><strong>Exact match, not "contains."</strong> A contains-match for <code>PLANNED</code> matched prose elsewhere on
+the sheet — <em>"planned ship Thu 19 Nov 2026"</em> — several rows above the actual column header.
+The projection would have anchored to the wrong column and produced plausible wrong numbers
+indefinitely. Caught in test, not in production, and only because the test used the real
+sheet's text.</p>
+<h3>4. Refuse before you write</h3>
+<p>Verify every landmark first. If anything is missing, <strong>throw before the first write</strong> and
+put what you actually saw in the message:</p>
+<pre><code class="language-javascript">if (!hit) {
+  throw new Error('Could not find &quot;WHERE WE STAND&quot; - nothing was changed.\n' +
+                  'Row ' + row + ' reads: ' + grid[row - 1].join(' | '));
+}
+</code></pre>
+<p>This is the highest-value pattern here. A real run refused because a status band was
+assumed at D6:F6 and actually sat at F6:H6. Nothing was corrupted, and the error text
+carried the evidence needed to fix it in one iteration.</p>
+<h3>5. Idempotent</h3>
+<p>Assume it runs twice. Writes should be formulas and values that can be laid down repeatedly
+without compounding.</p>
+<h3>6. Ship a read-only diagnostic alongside</h3>
+<pre><code class="language-javascript">function whereIsEverything() { /* writes nothing, reports addresses */ }
+</code></pre>
+<p>When a guard fires, this answers "so where <em>is</em> it?" without another code change.</p>
+<h3>7. Never widen the blast radius</h3>
+<p>Scripts that add observability write <strong>only</strong> to columns outside the graded range, and the
+test asserts it:</p>
+<pre><code>writes into columns A-H (must be 0): 0
+</code></pre>
+<p>A metric script that can reach a grade column will eventually reach one.</p>
+<h2>Testing Apps Script without a spreadsheet</h2>
+<p>Apps Script has no local runner. A ~40-line Node mock of <code>SpreadsheetApp</code> — <code>getRange</code>,
+<code>getValues</code>, <code>setValue</code>, <code>setFormula</code> recording to an array — runs the real <code>.gs</code> file via
+<code>eval</code> and asserts:</p>
+<ul>
+<li>which cells were written, and that no forbidden column was touched</li>
+<li>that every date is at noon</li>
+<li>that the guard throws when the layout is perturbed</li>
+<li>that a second run is clean</li>
+</ul>
+<p>Build the mock from the <strong>live sheet's actual text</strong>, not from what you believe the layout
+to be. The mock that would have caught the D6/F6 error was the one built from real values.</p>
+<h2>The bug class worth naming: silent constant rot</h2>
+<pre><code class="language-javascript">WORKDAY(DATE(2026,11,5), drift + 1)    // the original ship date
+</code></pre>
+<p>Correct when written. After two re-plans, the headline projection read a date <strong>in the
+past</strong> and overstated remaining slack by seven days. No error, no warning — it appeared in
+the summary band, which is read most often and questioned least.</p>
+<p>Replaced by a reference to the schedule's own final planned date, so re-dating the schedule
+moves the projection.</p>
+<p><strong>Derive your anchors. A typed constant is a fact that was true once.</strong></p>
+<footer>
+<p>Part of <a href="../">an open operating model for accredited homeschooling</a> &mdash;
+source on <a href="https://github.com/jvholmes87/homeschool-operating-system">GitHub</a>.
+The student in this programme is never identified; see
+<a href="08-privacy-rules.html">the privacy rules</a>.</p>
+<p>No analytics, no cookies, no trackers.</p>
+</footer>
+</main>
+</body>
+</html>
