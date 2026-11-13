@@ -94,6 +94,16 @@ for src in sorted(DOCS.glob("*.md")):
 
     md.reset()
     body = md.convert(text)
+
+    # Cross-references written as inline code - `07-claims-and-limits.md` -
+    # read as dead filenames on the website. Turn them into real links to the
+    # generated page, titled, so a reader can follow them.
+    def linkify(m):
+        ref = m.group(1)
+        label = TITLES.get(ref, ref.replace("-", " "))
+        return '<a href="%s.html">%s</a>' % (ref, label)
+    body = re.sub(r"<code>(?:docs/)?(\d\d-[a-z0-9-]+)\.md</code>", linkify, body)
+
     title = TITLES.get(slug, slug.replace("-", " "))
 
     out = DOCS / (slug + ".html")
