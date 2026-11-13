@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homeschool coverage benchmark</title>
+<style>
+  :root {
+    --ink:#1d2228; --muted:#5d6672; --line:#d8dde3; --bg:#fbfcfd;
+    --you:#1c4f8f; --bench:#8c93a0; --good:#1c7a4a; --warn:#b35309;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:24px 18px 64px; background:var(--bg); color:var(--ink);
+         font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width:760px; margin:0 auto; }
+  h1 { font-size:27px; line-height:1.2; margin:0 0 6px; }
+  h2 { font-size:19px; margin:34px 0 10px; padding-bottom:5px; border-bottom:2px solid var(--line); }
+  p.lede { color:var(--muted); margin:0 0 6px; }
+  .priv { display:inline-block; font-size:13px; color:var(--good); border:1px solid var(--good);
+          border-radius:999px; padding:3px 11px; margin:10px 0 0; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 0; }
+  th,td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); font-size:15px; }
+  th { color:var(--muted); font-weight:600; }
+  td.n, th.n { text-align:right; width:92px; white-space:nowrap; }
+  input[type=number] { width:88px; padding:6px 8px; font-size:15px; text-align:right;
+                       border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); }
+  input[type=number]:focus { outline:2px solid var(--you); outline-offset:1px; }
+  .bar { position:relative; height:9px; background:#e8ebef; border-radius:5px; overflow:hidden; margin-top:6px; }
+  .bar > span { position:absolute; left:0; top:0; bottom:0; border-radius:5px; background:var(--you); }
+  .bar.b > span { background:var(--bench); }
+  .row { margin:0 0 16px; }
+  .row .lab { display:flex; justify-content:space-between; font-size:14px; }
+  .row .lab b { font-variant-numeric:tabular-nums; }
+  .verdict { border-left:4px solid var(--you); background:#fff; padding:14px 16px;
+             border-radius:0 8px 8px 0; margin:16px 0 0; }
+  .verdict h3 { margin:0 0 6px; font-size:17px; }
+  .verdict p { margin:0 0 8px; }
+  .verdict p:last-child { margin:0; }
+  .note { font-size:14px; color:var(--muted); }
+  footer { margin-top:40px; font-size:13.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:14px; }
+  a { color:var(--you); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Are we doing enough hours?</h1>
+<p class="lede">A coverage check for elementary homeschoolers, against the federal numbers
+for US public schools. Enter your week; nothing else happens.</p>
+<span class="priv">Runs entirely in your browser &middot; collects nothing &middot; sends nothing</span>
+
+<h2>Your week</h2>
+<table>
+  <tr><th>Subject</th><th class="n">Hours/week</th></tr>
+  <tr><td>English / language arts<div class="note">reading, writing, spelling, grammar, handwriting</div></td>
+      <td class="n"><input type="number" id="ela" min="0" max="60" step="0.5" value="0"></td></tr>
+  <tr><td>Mathematics</td>
+      <td class="n"><input type="number" id="math" min="0" max="60" step="0.5" value="0"></td></tr>
+  <tr><td>Social studies / history</td>
+      <td class="n"><input type="number" id="soc" min="0" max="60" step="0.5" value="0"></td></tr>
+  <tr><td>Science</td>
+      <td class="n"><input type="number" id="sci" min="0" max="60" step="0.5" value="0"></td></tr>
+  <tr><td>Other taught subjects<div class="note">second language, Bible, music, art &mdash; anything timetabled</div></td>
+      <td class="n"><input type="number" id="other" min="0" max="60" step="0.5" value="0"></td></tr>
+  <tr><td>Structured activity outside lessons<div class="note">clubs, sport, scouting, tutoring, co-op</div></td>
+      <td class="n"><input type="number" id="enrich" min="0" max="60" step="0.5" value="0"></td></tr>
+</table>
+
+<h2>Against the benchmark</h2>
+<div id="bars"></div>
+<div class="verdict" id="verdict"></div>
+
+<h2>What the benchmark is</h2>
+<p>US public school teachers of grades 1&ndash;4, from the federal Schools and Staffing
+Survey, reported these weekly instructional hours:</p>
+<table>
+  <tr><th>Subject</th><th class="n">Hours/week</th></tr>
+  <tr><td>English / language arts</td><td class="n">11.6</td></tr>
+  <tr><td>Mathematics</td><td class="n">5.4</td></tr>
+  <tr><td>Social studies</td><td class="n">2.5</td></tr>
+  <tr><td>Science</td><td class="n">2.3</td></tr>
+  <tr><td><b>Core instruction</b></td><td class="n"><b>21.8</b></td></tr>
+  <tr><td>Length of the student school week</td><td class="n">32.1</td></tr>
+  <tr><td><b>Not core instruction</b></td><td class="n"><b>10.3</b></td></tr>
+</table>
+<p class="note">That last row is the one most people have never seen. About a third of a
+public elementary week is not core instruction &mdash; transitions, attendance, lining up,
+assemblies, and the overhead of moving twenty-five children through a building. It is why a
+homeschool day that looks short can cover the same ground.</p>
+
+<h2>What this does not tell you</h2>
+<p><b>This measures coverage, not learning.</b> Hours are an input. A child working at their
+own level covers more in less time, and a child who needs longer on something is not behind
+for taking it. More hours is not better; it is just more hours.</p>
+<p>It also cannot tell you whether homeschooling produces better outcomes than school. The
+research does not establish that in either direction &mdash; including, explicitly, the
+leading pro-homeschooling research body, which states that the designs used to date do not
+show homeschooling <i>causes</i> the results it reports.</p>
+<p>Use this to answer one narrow question honestly: <b>is my week in the same territory as a
+school week, or is there a subject quietly getting nothing?</b> That question is worth
+answering, and it is the only one a number of hours can answer.</p>
+
+<footer>
+<p><b>Sources.</b> Instructional hours by subject: National Center for Education Statistics,
+<i>Changes in Instructional Hours in Four Subjects by Public School Teachers of Grades 1
+Through 4</i> (NCES 2007&ndash;305), Schools and Staffing Survey 2003&ndash;04. Benchmark
+applies to grades 1&ndash;4; treat it as indicative outside that range.</p>
+<p>Part of <a href="https://github.com/jvholmes87/homeschool-operating-system">homeschool-operating-system</a>
+&mdash; an open operating model for running an accredited homeschool programme. MIT licensed.
+No data leaves this page.</p>
+</footer>
+
+</main>
+<script>
+(function () {
+  var B = { ela:11.6, math:5.4, soc:2.5, sci:2.3 };
+  var CORE = 21.8, WEEK = 32.1;
+  var ids = ["ela","math","soc","sci","other","enrich"];
+  var names = { ela:"English / language arts", math:"Mathematics",
+                soc:"Social studies / history", sci:"Science" };
+
+  function val(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return (isNaN(v) || v < 0) ? 0 : v;
+  }
+
+  function bar(label, you, bench, max) {
+    var pct = function (x) { return Math.min(100, (x / max) * 100); };
+    return '<div class="row"><div class="lab"><span>' + label +
+           '</span><b>' + you.toFixed(1) + ' vs ' + bench.toFixed(1) + '</b></div>' +
+           '<div class="bar"><span style="width:' + pct(you) + '%"></span></div>' +
+           '<div class="bar b"><span style="width:' + pct(bench) + '%"></span></div></div>';
+  }
+
+  function render() {
+    var v = {}; ids.forEach(function (i) { v[i] = val(i); });
+    var core = v.ela + v.math + v.soc + v.sci;
+    var taught = core + v.other;
+    var total = taught + v.enrich;
+    var max = Math.max(13, v.ela, B.ela);
+
+    var html = "";
+    ["ela","math","soc","sci"].forEach(function (k) {
+      html += bar(names[k], v[k], B[k], max);
+    });
+    html += bar("<b>Core instruction</b>", core, CORE, Math.max(CORE, core, 1));
+    document.getElementById("bars").innerHTML =
+      html + '<p class="note">Top bar is your week. Lower grey bar is the benchmark.</p>';
+
+    // Verdict. Deliberately avoids praising more hours.
+    var out = "", gaps = [];
+    ["ela","math","soc","sci"].forEach(function (k) {
+      if (B[k] > 0 && v[k] / B[k] < 0.5) { gaps.push(names[k].toLowerCase()); }
+    });
+
+    if (total === 0) {
+      out = "<h3>Enter your hours above</h3><p>Nothing is sent anywhere. " +
+            "Refreshing the page clears it.</p>";
+    } else {
+      var pc = Math.round((core / CORE) * 100);
+      out = "<h3>Core instruction: " + core.toFixed(1) + " hrs/week &mdash; " +
+            pc + "% of the public elementary figure</h3>";
+
+      if (pc >= 85 && pc <= 125) {
+        out += "<p>Squarely in the same territory as a school week.</p>";
+      } else if (pc > 125) {
+        out += "<p>Above the benchmark. That is not automatically better &mdash; " +
+               "check it is not coming out of sleep, play or family time, which are " +
+               "not optional inputs.</p>";
+      } else if (pc >= 60) {
+        out += "<p>Below the benchmark, which may be entirely fine: one-to-one teaching " +
+               "has none of the overhead a classroom carries. Worth knowing rather than " +
+               "assuming.</p>";
+      } else {
+        out += "<p>Well below the benchmark. Sometimes right &mdash; an advanced child " +
+               "working fast, or a subject on a break week. Worth a deliberate look " +
+               "rather than a shrug.</p>";
+      }
+
+      if (gaps.length) {
+        out += "<p><b>Thinnest against the benchmark:</b> " + gaps.join(", ") +
+               ". A subject at under half the benchmark is usually one that quietly " +
+               "stopped happening, not one that was decided against.</p>";
+      }
+
+      out += "<p class='note'>Taught subjects total " + taught.toFixed(1) +
+             " hrs/week. With structured activity outside lessons, " + total.toFixed(1) +
+             " hrs/week. A public elementary student is in school about " +
+             WEEK.toFixed(1) + " hrs/week, of which about " + CORE.toFixed(1) +
+             " is core instruction.</p>";
+    }
+    document.getElementById("verdict").innerHTML = out;
+  }
+
+  ids.forEach(function (i) {
+    document.getElementById(i).addEventListener("input", render);
+  });
+  render();
+})();
+</script>
+</body>
+</html>
