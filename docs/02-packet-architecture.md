@@ -1,8 +1,3 @@
----
-layout: default
-title: Daily packet architecture
----
-
 # 02 — Packet architecture
 
 ## Student packet
