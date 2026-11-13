@@ -1,3 +1,8 @@
+---
+layout: default
+title: Claims and limits
+---
+
 # 07 — What this case study claims, and what it does not
 
 This repository is written by someone who thinks homeschooling is a good option and wants

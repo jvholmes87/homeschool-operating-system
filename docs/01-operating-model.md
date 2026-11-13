@@ -1,3 +1,8 @@
+---
+layout: default
+title: Operating model
+---
+
 # 01 — Operating model
 
 ## Roles

@@ -1,3 +1,8 @@
+---
+layout: default
+title: Metrics that are tracked but never graded
+---
+
 # 05 — Metrics that are tracked but never graded
 
 ## The principle
