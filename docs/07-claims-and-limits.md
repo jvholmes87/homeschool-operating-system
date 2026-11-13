@@ -61,7 +61,27 @@ Every critique of homeschool research names the same four defects:
 | Method not transparent | **Resolved.** The whole operating model is published. |
 | No controls for family background | Still true. **Unresolved.** |
 
-Two of four, which is two more than most published accounts. The point of this repository
+Two of four, which is two more than most published accounts.
+
+### The externally comparable number
+
+Everything else here is internal: hours we logged, grades the accrediting body assigned
+against its own curriculum. None of it can be set beside a public-school cohort.
+
+A **norm-referenced standardized test** can. Abeka supplies the Stanford 10 and the Iowa
+Tests, and accredited enrolment includes one free test per enrolment year. Both report a
+percentile against a national sample, which is the only figure in this entire project that
+means anything to someone outside it.
+
+It will be sat once a year and **the percentile published whichever way it falls.** A
+programme that reports its own grades and quietly skips the external test is reporting
+nothing. One data point a year is still N=1 and still proves nothing general — but it is
+checkable by a stranger, and almost nothing else here is.
+
+Worth noting what it is being measured against: Abeka's own marketing publishes no outcome
+statistics at all — the "Why Abeka" page offers that students "have competed in the
+Olympics" and a parent testimonial, and names no accrediting body. The publisher does not
+fill this gap either. The point of this repository
 is not to settle the question. It is to be the kind of account that could be checked.
 
 ## Reported in advance
@@ -75,7 +95,7 @@ Stated before the results exist, so there is nothing to select afterwards:
 | Working hours per school day | Daily pacing log | Continuous |
 | Reading rate against comprehension | Timed quizzes | Each timed quiz |
 | Schedule slip: planned date vs actual | Tracker | Daily |
-| Standardized test results, when sat | Test provider | As scheduled |
+| **Norm-referenced standardized test** — percentile against a national sample | Stanford 10 or Iowa, through the accrediting body | Once per enrolment year |
 
 **Scores are reported whether they are good or not.** A worked example already in this
 repository: a timed reading quiz returned 80, ten points below the same student's result a

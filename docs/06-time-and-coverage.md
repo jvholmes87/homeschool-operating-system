@@ -37,6 +37,9 @@ instruction either.
 
 ## This programme
 
+**Abeka Academy Grade 4 Accredited Video** — 170 video lessons across four grading
+periods, with tests and exams graded by the accrediting body rather than by the parent.
+
 Measured across Days 17–22 of the first grading period:
 
 | | Hours |
