@@ -1,3 +1,8 @@
+---
+layout: default
+title: Time and coverage
+---
+
 # 06 — Time and coverage, measured against a public elementary benchmark
 
 This is a **time and coverage** comparison. It makes no claim about learning outcomes;
