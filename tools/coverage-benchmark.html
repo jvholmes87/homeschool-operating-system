@@ -3,19 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Homeschool coverage benchmark</title>
+<title>Are we doing enough hours? &mdash; Homeschool Hub Weekly</title>
+<meta name="description" content="A free coverage check for elementary homeschoolers. Enter your week and compare it to the federal numbers for US public schools: 21.8 core hours against a 32.1-hour school week. Runs in your browser and collects nothing.">
+<link rel="canonical" href="https://homeschoolhubweekly.com/tools/coverage-benchmark.html">
+<meta name="author" content="Jason V. Holmes">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1c5f7a">
+
+<meta property="og:site_name" content="Homeschool Hub Weekly">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://homeschoolhubweekly.com/tools/coverage-benchmark.html">
+<meta property="og:title" content="Are we doing enough hours?">
+<meta property="og:description" content="Compare your homeschool week to the federal numbers for US public schools. Free, runs in your browser, collects nothing.">
+<meta property="og:image" content="https://homeschoolhubweekly.com/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Homeschool Hub Weekly">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Are we doing enough hours?">
+<meta name="twitter:description" content="Compare your homeschool week to the federal numbers for US public schools. Free, runs in your browser, collects nothing.">
+<meta name="twitter:image" content="https://homeschoolhubweekly.com/assets/og-card.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%231c5f7a'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23fdfbf7' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication",
+ "name":"Homeschool coverage benchmark",
+ "url":"https://homeschoolhubweekly.com/tools/coverage-benchmark.html",
+ "applicationCategory":"EducationalApplication",
+ "operatingSystem":"Any web browser",
+ "description":"Compares a homeschool week against NCES figures for US public schools: 21.8 core instructional hours within a 32.1-hour student school week.",
+ "isAccessibleForFree":true,
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+ "author":{"@type":"Person","name":"Jason V. Holmes","url":"https://homeschoolhubweekly.com/about.html"}}
+</script>
+
+<!-- This file is deliberately self-contained: one page, inline styles and script,
+     no stylesheet link, no web font, no network call of any kind. Save it and it
+     still works. That is why it does not share the site stylesheet. -->
 <style>
   :root {
-    --ink:#1d2228; --muted:#5d6672; --line:#d8dde3; --bg:#fbfcfd;
-    --you:#1c4f8f; --bench:#8c93a0; --good:#1c7a4a; --warn:#b35309;
+    --ink:#23201c; --muted:#5f5a52; --line:#e4ddd2; --bg:#fdfbf7;
+    --you:#1c5f7a; --bench:#9c958a; --good:#1c7a4a; --warn:#c2410c;
   }
   * { box-sizing:border-box; }
-  body { margin:0; padding:24px 18px 64px; background:var(--bg); color:var(--ink);
-         font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-  main { max-width:760px; margin:0 auto; }
-  h1 { font-size:27px; line-height:1.2; margin:0 0 6px; }
-  h2 { font-size:19px; margin:34px 0 10px; padding-bottom:5px; border-bottom:2px solid var(--line); }
-  p.lede { color:var(--muted); margin:0 0 6px; }
+  body { margin:0; padding:0 0 64px; background:var(--bg); color:var(--ink);
+         font:16.5px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         -webkit-font-smoothing:antialiased; }
+  main { max-width:780px; margin:0 auto; padding:0 20px; }
+  .top { border-bottom:1px solid var(--line); background:#fff; margin-bottom:34px; }
+  .top > div { max-width:780px; margin:0 auto; padding:16px 20px; display:flex;
+               align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand { font-family:Georgia,serif; font-weight:700; font-size:19px; color:var(--ink);
+           text-decoration:none; letter-spacing:-.01em; }
+  .brand span { color:var(--you); }
+  .top nav { display:flex; gap:20px; font-size:15.5px; }
+  .top nav a { color:var(--muted); text-decoration:none; }
+  .top nav a:hover { color:var(--you); }
+  h1 { font-family:Georgia,"Iowan Old Style",serif; font-size:clamp(27px,5vw,36px);
+       line-height:1.18; margin:0 0 10px; letter-spacing:-.01em; }
+  h2 { font-family:Georgia,"Iowan Old Style",serif; font-size:21px; margin:38px 0 10px;
+       padding-bottom:6px; border-bottom:1px solid var(--line); }
+  p.lede { color:var(--muted); margin:0 0 6px; font-size:19px; line-height:1.55; max-width:62ch; }
   .priv { display:inline-block; font-size:13px; color:var(--good); border:1px solid var(--good);
           border-radius:999px; padding:3px 11px; margin:10px 0 0; }
   table { width:100%; border-collapse:collapse; margin:10px 0 0; }
@@ -42,6 +93,18 @@
 </style>
 </head>
 <body>
+
+<header class="top">
+  <div>
+    <a class="brand" href="../">Homeschool Hub <span>Weekly</span></a>
+    <nav>
+      <a href="coverage-benchmark.html">Hours check</a>
+      <a href="../about.html">Who we are</a>
+      <a href="../#method">The method</a>
+    </nav>
+  </div>
+</header>
+
 <main>
 
 <h1>Are we doing enough hours?</h1>
@@ -105,9 +168,13 @@ answering, and it is the only one a number of hours can answer.</p>
 <i>Changes in Instructional Hours in Four Subjects by Public School Teachers of Grades 1
 Through 4</i> (NCES 2007&ndash;305), Schools and Staffing Survey 2003&ndash;04. Benchmark
 applies to grades 1&ndash;4; treat it as indicative outside that range.</p>
-<p>Part of <a href="https://github.com/jvholmes87/homeschool-operating-system">homeschool-operating-system</a>
-&mdash; an open operating model for running an accredited homeschool programme. MIT licensed.
-No data leaves this page.</p>
+<p>Part of <a href="../">Homeschool Hub Weekly</a> &mdash; an open operating model for running
+an accredited homeschool programme, free to copy and adapt. See
+<a href="../docs/06-time-and-coverage.html">the arithmetic behind these numbers</a>,
+<a href="../docs/07-claims-and-limits.html">what we do not claim</a>, or
+<a href="../about.html">who is actually doing this</a>. Source on
+<a href="https://github.com/jvholmes87/homeschool-operating-system">GitHub</a>, MIT licensed.</p>
+<p>No data leaves this page. Save the file and it still works offline.</p>
 </footer>
 
 </main>
