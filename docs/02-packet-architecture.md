@@ -66,7 +66,7 @@ something that should.
 
 Writing space is specified against **observed handwriting**, not against what fits.
 
-For a ten-year-old with large handwriting:
+For an upper-elementary student with large handwriting:
 
 | Element | Size |
 |---|---|

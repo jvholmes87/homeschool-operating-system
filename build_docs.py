@@ -10,6 +10,7 @@ Run after editing any doc:    python3 build_docs.py
 """
 import pathlib, re, sys
 import markdown
+from leak_scan import scan
 
 HERE = pathlib.Path(__file__).parent
 DOCS = HERE / "docs"
@@ -75,6 +76,7 @@ TEMPLATE = """<!doctype html>
   <div class="wrap">
     <a class="brand" href="../">Homeschool Hub <span>Weekly</span></a>
     <nav>
+      <a href="../record.html">The record</a>
       <a href="../tools/coverage-benchmark.html">Hours check</a>
       <a href="../about.html">Who we are</a>
       <a href="../#method">The method</a>
@@ -130,8 +132,8 @@ BLURBS = {
         "What this programme does not claim. The homeschool outcome research is too "
         "weak to support a better-outcomes argument, including the research in its favour.",
     "08-privacy-rules":
-        "The rules that keep a ten-year-old out of a public repository, and the "
-        "build step that enforces them instead of trusting anyone to remember.",
+        "The rules that keep a child out of a public repository, and the build "
+        "step that enforces them instead of trusting anyone to remember.",
 }
 
 md = markdown.Markdown(extensions=["tables", "fenced_code", "sane_lists", "attr_list"])
@@ -172,8 +174,9 @@ for src in sorted(DOCS.glob("*.md")):
 
     if "{{" in body or "{%" in body:
         problems.append(slug + ": template syntax leaked into output")
-    if re.search(r"(?i)\bjamie\b", body):
-        problems.append(slug + ": STUDENT NAME IN OUTPUT")
+    # Same checks the standalone scanner runs, from one definition - see leak_scan.py
+    for label in scan(body):
+        problems.append("%s: %s" % (slug, label))
 
 print("built %d doc pages" % built)
 if problems:
