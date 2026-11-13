@@ -119,6 +119,9 @@ docs/
   05-metrics.md               tracked-but-not-graded measures, and honest flags
   06-time-and-coverage.md     measured hours against a public elementary benchmark
   07-claims-and-limits.md     what this claims, what it does not, and what gets reported
+  08-privacy-rules.md         binding rules - the student is never identified
+tools/
+  coverage-benchmark.html     "are we doing enough hours?" - self-contained, sends nothing
 generators/
   style.css                   shared stylesheet: page, type, subject colour system
   packet.py                   student packet -> A4 PDF
@@ -257,6 +260,18 @@ period **whether or not they are good**. The measures were fixed in advance, so 
 nothing to select afterwards; the list is in `07-claims-and-limits.md`.
 
 ---
+
+## For other homeschooling families
+
+**[tools/coverage-benchmark.html](tools/coverage-benchmark.html)** answers the question most
+often asked and least often answered: *are we doing enough hours?* Enter your week, see it
+against the federal grades 1-4 figures, and find the subject that quietly stopped happening.
+
+It runs entirely in the browser. No analytics, no form posts, no storage, no third-party
+scripts - the only external link in the file is back to this repository. A parent checking
+whether they are doing enough should not have to trust anyone with the answer.
+
+It measures coverage, not learning. More hours is not better; it is just more hours.
 
 ## Reuse
 
