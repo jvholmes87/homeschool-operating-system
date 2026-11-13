@@ -76,7 +76,30 @@ function whereIsEverything() { /* writes nothing, reports addresses */ }
 
 When a guard fires, this answers "so where *is* it?" without another code change.
 
-### 7. Never widen the blast radius
+### 7. Batch your writes or pay for it in minutes
+
+On a formula-heavy workbook, **every individual `setValue` can trigger a full
+recalculation.** A script writing forty cells one at a time caused forty
+recalculations of a sheet carrying `FILTER` and `INDEX` formulas across a
+twenty-six-row day table, and took **twelve minutes** to do work that should
+take seconds.
+
+```javascript
+// slow: one recalculation per cell
+for (var i = 0; i < rows.length; i++) {
+  sh.getRange(i + 2, 1).setValue(rows[i][0]);
+  sh.getRange(i + 2, 2).setValue(rows[i][1]);
+}
+
+// fast: one write, one recalculation
+sh.getRange(2, 1, rows.length, 2).setValues(rows);
+```
+
+The same applies to formatting: set it once over a range rather than per cell.
+This does not change a single result — it is purely the difference between a
+script you can run while you wait and one you start and walk away from.
+
+### 8. Never widen the blast radius
 
 Scripts that add observability write **only** to columns outside the graded range, and the
 test asserts it:

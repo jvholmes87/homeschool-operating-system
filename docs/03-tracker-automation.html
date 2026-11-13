@@ -90,7 +90,25 @@ without compounding.</p>
 <pre><code class="language-javascript">function whereIsEverything() { /* writes nothing, reports addresses */ }
 </code></pre>
 <p>When a guard fires, this answers "so where <em>is</em> it?" without another code change.</p>
-<h3>7. Never widen the blast radius</h3>
+<h3>7. Batch your writes or pay for it in minutes</h3>
+<p>On a formula-heavy workbook, <strong>every individual <code>setValue</code> can trigger a full
+recalculation.</strong> A script writing forty cells one at a time caused forty
+recalculations of a sheet carrying <code>FILTER</code> and <code>INDEX</code> formulas across a
+twenty-six-row day table, and took <strong>twelve minutes</strong> to do work that should
+take seconds.</p>
+<pre><code class="language-javascript">// slow: one recalculation per cell
+for (var i = 0; i &lt; rows.length; i++) {
+  sh.getRange(i + 2, 1).setValue(rows[i][0]);
+  sh.getRange(i + 2, 2).setValue(rows[i][1]);
+}
+
+// fast: one write, one recalculation
+sh.getRange(2, 1, rows.length, 2).setValues(rows);
+</code></pre>
+<p>The same applies to formatting: set it once over a range rather than per cell.
+This does not change a single result — it is purely the difference between a
+script you can run while you wait and one you start and walk away from.</p>
+<h3>8. Never widen the blast radius</h3>
 <p>Scripts that add observability write <strong>only</strong> to columns outside the graded range, and the
 test asserts it:</p>
 <pre><code>writes into columns A-H (must be 0): 0
