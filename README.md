@@ -75,6 +75,9 @@ times, named organisations or locations, because this is a public document about
 | Sports club | 1.5 – 2 |
 | Youth sports, 2 practices + 1 game, seasonal | 3 – 4.5 |
 
+Core instruction is **logged daily**. Enrichment hours are **estimates** until logged the
+same way — labelled as such wherever they appear.
+
 Against a US public elementary benchmark of **32.1 hours in school per week, of which 21.8
 is core instruction.** Core load is comparable; the recovered time is the third of the
 public week that is not instruction. Full working in
