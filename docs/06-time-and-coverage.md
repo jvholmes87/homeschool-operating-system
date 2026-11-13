@@ -3,8 +3,12 @@
 This is a **time and coverage** comparison. It makes no claim about learning outcomes;
 see `07-claims-and-limits.md` for why not.
 
-All figures for this programme are measured, not estimated: the daily packet logs start
-time, finish time and total breaks, and the tracker holds every graded result.
+**Core instruction hours are measured.** The daily packet logs start time, finish time and
+total breaks, and the tracker holds every graded result.
+
+**Enrichment hours are estimated** and labelled as such throughout. They are the
+programme owner's figures for session lengths, not logged times. Treat the core column as
+evidence and the enrichment column as a good-faith estimate until it is logged the same way.
 
 ---
 
@@ -52,7 +56,9 @@ Structured, scheduled activity outside the core programme. Reported **as hours b
 — not as days, times, named organisations or locations, because this is a public document
 about a specific child.
 
-| Category | Hours per week |
+*Estimated, not logged — see the note at the top.*
+
+| Category | Hours per week (est.) |
 |---|---|
 | Academic tutoring (mathematics and a second language), 3×/week | 9 – 12 |
 | Scouting, one meeting per week | 1.5 – 2 |
