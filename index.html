@@ -3,125 +3,183 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Homeschool Hub Weekly &mdash; an open operating model for accredited homeschooling</title>
-<meta name="description" content="How one family runs an accredited homeschool programme: the operating model, the hours, the third-party grades, and a free tool to check whether your week covers enough ground.">
+
+<title>Homeschool Hub Weekly — one family's accredited homeschool, in the open</title>
+<meta name="description" content="Everything about how one family runs an accredited homeschool: the daily method, the measured hours, and the grades from an outside examiner — published as they come, including the bad ones. Plus a free tool to check whether your own week covers enough ground.">
 <link rel="canonical" href="https://homeschoolhubweekly.com/">
-<meta property="og:title" content="Homeschool Hub Weekly">
-<meta property="og:description" content="An open operating model for accredited homeschooling - the method, the measured hours, and a coverage benchmark you can run on your own week.">
+<meta name="author" content="Jason V. Holmes">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1c5f7a">
+
+<meta property="og:site_name" content="Homeschool Hub Weekly">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://homeschoolhubweekly.com/">
-<style>
-  :root { --ink:#1d2228; --muted:#5d6672; --line:#d8dde3; --bg:#fbfcfd;
-          --accent:#1c4f8f; --good:#1c7a4a; }
-  * { box-sizing:border-box; }
-  body { margin:0; padding:0 18px 72px; background:var(--bg); color:var(--ink);
-         font:16.5px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-  main { max-width:760px; margin:0 auto; }
-  header { padding:48px 0 8px; }
-  h1 { font-size:34px; line-height:1.15; margin:0 0 10px; letter-spacing:-0.4px; }
-  h2 { font-size:21px; margin:42px 0 10px; padding-bottom:6px; border-bottom:2px solid var(--line); }
-  h3 { font-size:17px; margin:22px 0 4px; }
-  p.lede { font-size:18.5px; color:var(--muted); margin:0 0 20px; }
-  a { color:var(--accent); }
-  .cta { display:block; background:#fff; border:1px solid var(--line); border-left:4px solid var(--accent);
-         border-radius:0 10px 10px 0; padding:20px 22px; margin:26px 0; text-decoration:none; color:inherit; }
-  .cta:hover { border-left-color:var(--good); }
-  .cta b { display:block; font-size:19px; color:var(--accent); margin-bottom:4px; }
-  .cta span { color:var(--muted); font-size:15.5px; }
-  .pill { display:inline-block; font-size:13px; color:var(--good); border:1px solid var(--good);
-          border-radius:999px; padding:3px 11px; margin-top:8px; }
-  table { width:100%; border-collapse:collapse; margin:12px 0; }
-  th,td { text-align:left; padding:8px; border-bottom:1px solid var(--line); font-size:15.5px; }
-  th { color:var(--muted); font-weight:600; }
-  td.n,th.n { text-align:right; white-space:nowrap; }
-  ul { padding-left:20px; } li { margin-bottom:7px; }
-  .box { background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 20px; margin:18px 0; }
-  .note { font-size:14.5px; color:var(--muted); }
-  footer { margin-top:52px; padding-top:18px; border-top:1px solid var(--line);
-           font-size:14px; color:var(--muted); }
-</style>
+<meta property="og:title" content="One family's accredited homeschool, in the open">
+<meta property="og:description" content="The daily method, the measured hours, and the grades from an outside examiner — published as they come, including the bad ones.">
+<meta property="og:image" content="https://homeschoolhubweekly.com/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Homeschool Hub Weekly — 10.3 hours a week of a US public elementary week are not core instruction.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="One family's accredited homeschool, in the open">
+<meta name="twitter:description" content="The method, the hours, and the grades from an outside examiner — published as they come, including the bad ones.">
+<meta name="twitter:image" content="https://homeschoolhubweekly.com/assets/og-card.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%231c5f7a'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23fdfbf7' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebSite","@id":"https://homeschoolhubweekly.com/#site",
+  "url":"https://homeschoolhubweekly.com/","name":"Homeschool Hub Weekly",
+  "description":"One family's accredited homeschool programme, documented in the open.",
+  "inLanguage":"en-US"},
+ {"@type":"Person","@id":"https://homeschoolhubweekly.com/about.html#parent",
+  "name":"Jason V. Holmes","jobTitle":"Homeschooling parent",
+  "alumniOf":{"@type":"CollegeOrUniversity","name":"University of Maryland Global Campus"},
+  "knowsAbout":["Homeschooling","Accredited home education","Systems engineering"]},
+ {"@type":"WebPage","@id":"https://homeschoolhubweekly.com/#webpage",
+  "url":"https://homeschoolhubweekly.com/","isPartOf":{"@id":"https://homeschoolhubweekly.com/#site"},
+  "about":{"@id":"https://homeschoolhubweekly.com/about.html#parent"},
+  "name":"One family's accredited homeschool, in the open"}
+]}
+</script>
 </head>
 <body>
-<main>
 
-<header>
-<h1>An open operating model for accredited homeschooling</h1>
-<p class="lede">One family, one accredited programme, documented in the open &mdash; the method,
-the measured hours, and the grades as they come. Plus a free tool to check your own week.</p>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">Homeschool Hub <span>Weekly</span></a>
+    <nav>
+      <a href="tools/coverage-benchmark.html">Hours check</a>
+      <a href="about.html">Who we are</a>
+      <a href="#method">The method</a>
+    </nav>
+  </div>
 </header>
 
+<main class="wrap">
+
+<section class="hero">
+  <p class="kicker">One family &middot; published in the open</p>
+  <h1>We homeschool. Here is all of it.</h1>
+  <p class="lede">Most homeschool advice is somebody telling you it worked for them.
+  This is the whole operation instead &mdash; what we actually do each day, how many hours
+  it really takes, and what an outside examiner says about it. Including the parts that
+  don&rsquo;t look good.</p>
+</section>
+
 <a class="cta" href="tools/coverage-benchmark.html">
-  <b>Are we doing enough hours? &rarr;</b>
-  <span>Enter your week and see it against the federal figures for US public elementary
-  schools. Finds the subject that quietly stopped happening.</span>
-  <span class="pill">Runs in your browser &middot; collects nothing</span>
+  <b>Are we doing enough hours?</b>
+  <span>The question every homeschooling parent asks at 9pm and can never quite answer.
+  Put your week in, see it against the federal figures for US public schools, and find the
+  subject that quietly stopped happening.</span>
+  <span class="tag">Free &middot; runs in your browser &middot; collects nothing</span>
 </a>
 
-<h2>The number most people have never seen</h2>
-<p>US public school teachers of grades 1&ndash;4 report these weekly instructional hours to
-the federal Schools and Staffing Survey:</p>
-<table>
-  <tr><th>Core instruction</th><td class="n"><b>21.8 hrs/week</b></td></tr>
-  <tr><th>Length of the student school week</th><td class="n">32.1 hrs/week</td></tr>
-  <tr><th><b>Not core instruction</b></th><td class="n"><b>10.3 hrs/week &mdash; about a third</b></td></tr>
-</table>
-<p>Transitions, attendance, lining up, assemblies, and the overhead of moving twenty-five
-children through a building. It is why a homeschool day that looks short can cover the same
-ground &mdash; and why &ldquo;we only did four hours&rdquo; is not the admission it feels
-like.</p>
+<section>
+  <h2>The number that changed how we see our day</h2>
+  <div class="stat">
+    <p class="big">10.3</p>
+    <p class="cap"><b>hours a week</b> of a US public elementary school week are
+    <b>not core instruction</b> &mdash; about a third of it.</p>
+  </div>
+  <p>Transitions, attendance, lining up, assemblies, and the ordinary friction of moving
+  twenty-five children around a building. It isn&rsquo;t anyone&rsquo;s fault and
+  it isn&rsquo;t wasted exactly. But it is why a homeschool day that feels suspiciously
+  short can cover the same ground.</p>
+  <p>If you have ever finished at lunchtime and wondered whether you were shortchanging
+  your kid &mdash; that number is for you.
+  <a href="docs/06-time-and-coverage.html">The full working is here</a>, sourced to the
+  federal survey.</p>
+</section>
 
-<h2>What this site is</h2>
-<p>A working record of one accredited homeschool programme, published as it runs. The
-student is a single parent&rsquo;s daughter in upper elementary, enrolled in
-<b>Abeka Academy Grade 4 Accredited Video</b> &mdash; which grades her tests and exams
-independently, rather than the parent marking the work that becomes the record. She is
-never named here.</p>
-<p>Each year she also sits <b>Iowa Form E</b>, a norm-referenced standardized test included
-free with accredited enrolment. Its 2024 norms are built from roughly 4.6 million student
-records weighted to federal enrolment data &mdash; so the percentile compares her to US
-students generally, not to a narrower sample. It is the one number here that means anything
-to someone outside this programme, and it gets published whichever way it falls.</p>
+<section>
+  <h2>Who is actually doing this</h2>
+  <p>A single father with full custody, a daughter in upper elementary, and an accredited
+  curriculum that grades her work so we can&rsquo;t grade it ourselves.</p>
+  <p>The two things people ask about homeschooling are whether the child is isolated and
+  whether the parent is qualified to teach. Both are fair questions. We answer both with
+  specifics on the <a href="about.html">who we are</a> page &mdash; her actual week, what
+  she is like to teach, and what the parent running this did before.</p>
+</section>
 
-<div class="box">
-<h3>What gets published</h3>
-<ul>
-  <li><b>The method</b> &mdash; every document, rule and generator, free to copy</li>
-  <li><b>The hours</b> &mdash; logged daily, not estimated</li>
-  <li><b>The grades</b> &mdash; subject averages each grading period, marked by the
-      accrediting body rather than by the parent</li>
-  <li><b>The failures</b> &mdash; including the ones that look bad</li>
-</ul>
-<p class="note" style="margin-bottom:0">Measures were fixed in advance, so there is nothing
-to select after the fact.</p>
-</div>
+<section>
+  <h2>What gets published here</h2>
+  <div class="cards two">
+    <div class="card">
+      <h3>The method</h3>
+      <p>Every document, rule and generator we use, free to copy. Not a philosophy &mdash;
+      the actual daily paperwork.</p>
+    </div>
+    <div class="card">
+      <h3>The hours</h3>
+      <p>Logged daily off the pacing sheet. Start, finish, breaks. Written down as they
+      happen, not remembered afterwards.</p>
+    </div>
+    <div class="card">
+      <h3>The grades</h3>
+      <p>Subject averages each grading period, marked by the accrediting body rather than
+      by the parent.</p>
+    </div>
+    <div class="card">
+      <h3>A yearly outside test</h3>
+      <p>Iowa Form E, norm-referenced on 2024 data. A percentile against US students
+      generally.</p>
+    </div>
+  </div>
+  <div class="plain">
+    <p><b>The measures were fixed in advance.</b> We wrote down what we would report
+    before any of it existed, so there is nothing to quietly leave out later. When a score
+    is bad it goes up anyway, with the reason beside it.</p>
+    <p class="note" style="margin-top:10px">A real one already on the site: a timed
+    reading quiz came back ten points below the same child&rsquo;s result a week earlier,
+    at an identical reading speed. She was tired. That is recorded next to the number,
+    because a number without its context turns into a lie the moment everyone forgets.</p>
+  </div>
+</section>
 
-<h2>What this does not claim</h2>
-<p><b>Not that homeschooling produces better results than school.</b> One student, no
-control group. The research does not establish that in either direction &mdash; and that
-includes the leading pro-homeschooling research body, which states plainly that the study
-designs used to date do not show homeschooling <i>causes</i> the outcomes they report.</p>
-<p>Anyone selling you certainty on that question is selling you something. The honest
-question is not whether homeschooling is better. It is whether you can run the operation
-&mdash; and that one is answerable, which is what this site is for.</p>
+<section>
+  <h2>What we don&rsquo;t claim</h2>
+  <p><b>We are not telling you homeschooling beats school.</b> One child, no control
+  group. The research does not settle it in either direction &mdash; and that includes the
+  leading pro-homeschooling research body, which states plainly that the studies so far do
+  not show homeschooling <i>causes</i> the results they report.</p>
+  <p>Anyone selling you certainty on that is selling you something. The useful question is
+  not whether homeschooling is better in the abstract. It is whether you can run the
+  thing &mdash; and that one has an answer, which is what this site is for.</p>
+  <p><a href="docs/07-claims-and-limits.html">What we claim, and what we don&rsquo;t &rarr;</a></p>
+</section>
 
-<h2>Read the method</h2>
-<ul>
-  <li><a href="docs/01-operating-model.html">Operating model</a> &mdash; roles, and the line between house rules and the curriculum's rules</li>
-  <li><a href="docs/02-packet-architecture.html">Daily packet architecture</a> &mdash; what gets printed each day and why</li>
-  <li><a href="docs/05-metrics.html">Metrics that are tracked but never graded</a></li>
-  <li><a href="docs/06-time-and-coverage.html">Time and coverage</a> &mdash; the measured hours, in full</li>
-  <li><a href="docs/07-claims-and-limits.html">Claims and limits</a> &mdash; what is claimed, and what gets reported</li>
-  <li><a href="docs/08-privacy-rules.html">Privacy rules</a> &mdash; why the student is never identified</li>
-</ul>
-
-<footer>
-<p>Everything here is free to copy and adapt &mdash; code MIT licensed, on
-<a href="https://github.com/jvholmes87/homeschool-operating-system">GitHub</a>.
-No curriculum publisher's content is reproduced.</p>
-<p>No analytics, no cookies, no trackers, no third-party scripts. Nothing on this site
-collects anything about you.</p>
-</footer>
+<section id="method">
+  <h2>Read the method</h2>
+  <ul>
+    <li><a href="docs/01-operating-model.html">How the day is run</a> &mdash; who does what, and the line between our house rules and the curriculum&rsquo;s</li>
+    <li><a href="docs/02-packet-architecture.html">The daily packet</a> &mdash; what gets printed every morning, and why it is split the way it is</li>
+    <li><a href="docs/03-tracker-automation.html">The tracker</a> &mdash; the rules that keep a script from quietly corrupting a term&rsquo;s grades</li>
+    <li><a href="docs/04-rendering-constraints.html">Rendering constraints</a> &mdash; what breaks when you generate a child&rsquo;s worksheets and print them</li>
+    <li><a href="docs/05-metrics.html">Measuring without grading</a> &mdash; reading speed is tracked and never allowed near a score</li>
+    <li><a href="docs/06-time-and-coverage.html">Time and coverage</a> &mdash; our hours against the public school benchmark</li>
+    <li><a href="docs/07-claims-and-limits.html">Claims and limits</a> &mdash; what gets reported, and what it cannot prove</li>
+    <li><a href="docs/08-privacy-rules.html">Privacy rules</a> &mdash; why you will never see her name here</li>
+  </ul>
+  <p class="note">Built for <b>Abeka Academy Grade 4 Accredited Video</b>, though the
+  method is curriculum-agnostic. None of Abeka&rsquo;s content is reproduced here &mdash;
+  word lists, quiz items and answer keys are theirs, and are deliberately absent.</p>
+</section>
 
 </main>
+
+<footer>
+  <div class="wrap">
+    <p>Everything here is free to copy and adapt &mdash; code under MIT, on
+    <a href="https://github.com/jvholmes87/homeschool-operating-system">GitHub</a>.</p>
+    <p>No analytics, no cookies, no trackers, no third-party scripts. Nothing on this site
+    collects anything about you or your children.</p>
+  </div>
+</footer>
+
 </body>
 </html>
