@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Privacy rules &mdash; Homeschool Hub Weekly</title>
-<meta name="description" content="The rules that keep a ten-year-old out of a public repository, and the build step that enforces them instead of trusting anyone to remember.">
+<meta name="description" content="The rules that keep a child out of a public repository, and the build step that enforces them instead of trusting anyone to remember.">
 <link rel="canonical" href="https://homeschoolhubweekly.com/docs/08-privacy-rules.html">
 <meta name="author" content="Jason V. Holmes">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -16,7 +16,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://homeschoolhubweekly.com/docs/08-privacy-rules.html">
 <meta property="og:title" content="Privacy rules &mdash; Homeschool Hub Weekly">
-<meta property="og:description" content="The rules that keep a ten-year-old out of a public repository, and the build step that enforces them instead of trusting anyone to remember.">
+<meta property="og:description" content="The rules that keep a child out of a public repository, and the build step that enforces them instead of trusting anyone to remember.">
 <meta property="og:image" content="https://homeschoolhubweekly.com/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -24,7 +24,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Privacy rules &mdash; Homeschool Hub Weekly">
-<meta name="twitter:description" content="The rules that keep a ten-year-old out of a public repository, and the build step that enforces them instead of trusting anyone to remember.">
+<meta name="twitter:description" content="The rules that keep a child out of a public repository, and the build step that enforces them instead of trusting anyone to remember.">
 <meta name="twitter:image" content="https://homeschoolhubweekly.com/assets/og-card.png">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%231c5f7a'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23fdfbf7' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
@@ -33,7 +33,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"TechArticle",
  "headline":"Privacy rules",
- "description":"The rules that keep a ten-year-old out of a public repository, and the build step that enforces them instead of trusting anyone to remember.",
+ "description":"The rules that keep a child out of a public repository, and the build step that enforces them instead of trusting anyone to remember.",
  "url":"https://homeschoolhubweekly.com/docs/08-privacy-rules.html",
  "inLanguage":"en-US",
  "author":{"@type":"Person","name":"Jason V. Holmes","url":"https://homeschoolhubweekly.com/about.html"},
@@ -48,6 +48,7 @@
   <div class="wrap">
     <a class="brand" href="../">Homeschool Hub <span>Weekly</span></a>
     <nav>
+      <a href="../record.html">The record</a>
       <a href="../tools/coverage-benchmark.html">Hours check</a>
       <a href="../about.html">Who we are</a>
       <a href="../#method">The method</a>
@@ -64,7 +65,8 @@ is a minor. These rules are not editorial preference.</p>
 <h2>The student is never identified</h2>
 <ul>
 <li><strong>No name.</strong> Not full, not first, not initials. She is "the student".</li>
-<li><strong>No age or date of birth.</strong> "Upper elementary" is the limit.</li>
+<li><strong>No age or date of birth.</strong> "Upper elementary" is the limit — not the year, not the
+  birthday, not "she turns ten this month".</li>
 <li><strong>No photographs</strong>, of her or of her work in her handwriting.</li>
 <li><strong>No school-issued identifiers</strong> — account numbers, student IDs, enrolment numbers.</li>
 </ul>
@@ -74,9 +76,11 @@ adulthood.</p>
 <p><strong>This is thin cover, and it is meant to be.</strong> The repository author is named, and anyone
 who knows him can work out who the student is. The rule is not anonymity against someone
 who already knows her; it is that nothing here is indexed against her name.</p>
-<h2>Locations and schedules are never publishable</h2>
-<p>A public document that says a named-or-guessable ten-year-old is at a specific place at a
-specific time is a safety problem, however ordinary the activity.</p>
+<h2>Schedules are never publishable. Region is.</h2>
+<p>What locates a child is not a place on its own. It is a <strong>place plus a time plus a way to
+recognise her</strong>. Any two of those three are inert; all three together are the safety
+problem, however ordinary the activity.</p>
+<p>So the rule is drawn around the combination, not around the word "location":</p>
 <table>
 <thead>
 <tr>
@@ -86,25 +90,40 @@ specific time is a safety problem, however ordinary the activity.</p>
 </thead>
 <tbody>
 <tr>
-<td>Named organisations, troop or unit numbers</td>
-<td>the category: "scouting", "a sports club"</td>
-</tr>
-<tr>
-<td>Days and times of any activity</td>
+<td>Days, times, or recurring schedule of any activity</td>
 <td>hours per week</td>
 </tr>
 <tr>
-<td>Towns, bases, facilities, tutoring centres</td>
-<td>nothing, or the country at most</td>
+<td>Named organisations, troop or unit numbers</td>
+<td>the category: "scouting", "a Korean sports club"</td>
 </tr>
 <tr>
-<td>Anything that fixes her to a place and a time</td>
-<td>a weekly total</td>
+<td>Addresses, specific facilities, the academy or club she attends</td>
+<td>the region, and the category of place</td>
+</tr>
+<tr>
+<td>Her name or photograph alongside <em>any</em> of the above</td>
+<td>neither, ever</td>
 </tr>
 </tbody>
 </table>
-<p>"Scouting, one meeting per week, 1.5–2 hrs" makes exactly the same argument as naming the
-troop and the night, and tells a stranger nothing useful.</p>
+<p><strong>Region is published deliberately</strong> — the country, and the installation whose community
+this family is part of. That was a considered change, not a slip. The programme's entire
+shape is a consequence of being an overseas military family: the ship-by-mail deadlines,
+the time-zone gap with the school, the <em>hagwon</em> in the middle of a school week, the base
+scouting and youth-sports infrastructure doing the socialisation work. Strip the region out
+and the case study stops being useful to the families most likely to need it, who are
+disproportionately military and overseas.</p>
+<p>What that costs is accepted honestly: it narrows the pool. What it does not do is produce a
+findable child, because the schedule and the name — the other two legs — are absent and stay
+absent.</p>
+<p>"Scouting, one meeting per week, 1.5–2 hrs, on base" makes exactly the same argument as
+naming the troop and the night, and tells a stranger nothing actionable.</p>
+<h3>Date of birth</h3>
+<p>Her <strong>date of birth is never published</strong>, which is a change worth stating explicitly
+because birthdays are the detail families leak most casually — a cake photo, a "she turns
+ten today" post. DOB plus region plus a surname is enough to start matching records. It
+lives in the private operating files only, where it is needed to set the school calendar.</p>
 <h2>Curriculum content</h2>
 <p>No publisher's content is reproduced here: no word lists, quiz items, answer keys, grading
 tables or lesson text. Naming a curriculum you use is factual and fine. Reproducing it is
@@ -118,12 +137,15 @@ checking whether they do enough hours should not have to trust anyone with the a
 quietly into a release.</p>
 <h2>Before any commit</h2>
 <ol>
-<li>Does any file name, date-of-birth, photograph or school identifier appear?</li>
-<li>Does any file fix a child to a place and a time?</li>
+<li>Does any file carry her name, date of birth, photograph or a school identifier?</li>
+<li>Does any file put a child at a place <strong>on a given day or at a given time</strong>?</li>
+<li>Does any file name the troop, academy or club?</li>
 <li>Is any publisher content reproduced rather than described?</li>
 <li>Does any new interactive page call out to the network?</li>
 </ol>
-<p>The repository's leak scan covers (1) and (3) mechanically. (2) and (4) need a human.</p>
+<p>The leak scan covers (1) and (4) mechanically — the docs build exits non-zero if her name
+appears in generated output, so a slip fails the publish rather than shipping. (2), (3) and
+(5) need a human.</p>
 </article>
 </main>
 

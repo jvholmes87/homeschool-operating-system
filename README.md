@@ -231,13 +231,13 @@ Full detail in `docs/04-rendering-constraints.md`. The short version for WeasyPr
 
 ### 7. Size the artifact to the human
 
-A ten-year-old with large handwriting cannot fit *"to focus thoughts and efforts on one
+An upper-elementary student with large handwriting cannot fit *"to focus thoughts and efforts on one
 thing"* on a 40 mm blank. The build succeeded; the sheet was unusable. Writing space is now
 specified against observed handwriting — 10.5 mm ruled lines, three per definition, one word
 per block — not against what fits the page.
 
 The same applies to the day itself: breaks are **printed as numbered items in the running
-order**, because a ten-year-old who cannot see a break coming experiences the day as
+order**, because a child who cannot see a break coming experiences the day as
 unbroken work. And the day is quoted at both working time and start-to-finish time, since
 the second is the honest number.
 
