@@ -27,8 +27,7 @@ reproducing it are different things.
 
 ## The problem
 
-An accredited homeschool is not a teaching problem. It is a **compliance operation that
-happens to involve teaching.**
+An accredited homeschool combines teaching with a substantial **compliance and records-management workload**. This case study focuses on that operational workload; it does not reduce education to compliance.
 
 The program has hard requirements, and the consequences of missing them are not academic:
 
