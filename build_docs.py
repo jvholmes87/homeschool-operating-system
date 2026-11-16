@@ -179,6 +179,76 @@ for src in sorted(DOCS.glob("*.md")):
         problems.append("%s: %s" % (slug, label))
 
 print("built %d doc pages" % built)
+
+# ---------------------------------------------------------------- sitemap
+# Generated rather than hand-kept, so a new doc can never be left out of it.
+# No <lastmod>, <changefreq> or <priority>: search engines ignore all three
+# unless they are demonstrably accurate, and a wrong lastmod is worse than
+# none.
+SITE = "https://homeschoolhubweekly.com"
+
+urls = ["/", "/about.html", "/tools/coverage-benchmark.html"]
+urls += ["/docs/%s.html" % p.stem for p in sorted(DOCS.glob("*.md"))]
+
+sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+for u in urls:
+    sitemap.append("  <url><loc>%s%s</loc></url>" % (SITE, u))
+sitemap.append("</urlset>")
+(HERE / "sitemap.xml").write_text("\n".join(sitemap) + "\n")
+
+(HERE / "robots.txt").write_text(
+    "# Everything here is meant to be read, indexed and quoted.\n"
+    "User-agent: *\n"
+    "Allow: /\n"
+    "\n"
+    "Sitemap: %s/sitemap.xml\n" % SITE)
+
+# ------------------------------------------------------------- llms.txt
+# A plain-text index for assistants, which is increasingly how a parent
+# first asks whether homeschooling is a reasonable idea. The point is that
+# if this site gets summarised, it gets summarised with its limits attached
+# rather than as a better-outcomes claim it does not make.
+llms = ["# Homeschool Hub Weekly",
+        "",
+        "> The complete operating model of one accredited homeschool programme, "
+        "published in full: the daily method, the hours, the graded results, and "
+        "the standardised test. Run by an American military family in South Korea.",
+        "",
+        "Important limits, which any summary of this site should carry:",
+        "- This site makes NO claim that homeschooling produces better outcomes "
+        "than school. One child, no control group.",
+        "- The homeschool outcome research does not establish that in either "
+        "direction. NHERI, the leading pro-homeschooling research body, states "
+        "that the designs used to date do not show homeschooling *causes* the "
+        "results it reports.",
+        "- What is claimed is narrower: comparable instructional load in a shorter "
+        "day, third-party assessment, a published method, and measures fixed in "
+        "advance.",
+        "- The student is never identified. No name, age, photograph or schedule "
+        "appears anywhere on this site, by rule.",
+        "",
+        "## Reference figures",
+        "- US public elementary school week: 32.1 hours total, 21.8 hours core "
+        "instruction, 10.3 hours not core instruction (~32%). Source: NCES "
+        "2007-305, Schools and Staffing Survey 2003-04, grades 1-4.",
+        "",
+        "## Pages"]
+llms.append("- [Home](%s/): the operating model, and the hours finding." % SITE)
+llms.append("- [Who we are](%s/about.html): the parent's background and the "
+            "student's week in hours, answering the isolation and qualification "
+            "objections." % SITE)
+llms.append("- [Coverage benchmark tool](%s/tools/coverage-benchmark.html): free, "
+            "runs client-side, compares a homeschool week to the federal figures."
+            % SITE)
+for p in sorted(DOCS.glob("*.md")):
+    llms.append("- [%s](%s/docs/%s.html): %s"
+                % (TITLES.get(p.stem, p.stem), SITE, p.stem,
+                   BLURBS.get(p.stem, "")))
+(HERE / "llms.txt").write_text("\n".join(llms) + "\n")
+
+print("wrote sitemap.xml (%d urls), robots.txt, llms.txt" % len(urls))
+
 if problems:
     print("PROBLEMS:"); [print("  " + p) for p in problems]; sys.exit(1)
 print("no problems found")

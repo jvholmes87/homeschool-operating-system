@@ -1,0 +1,25 @@
+# Homeschool Hub Weekly
+
+> The complete operating model of one accredited homeschool programme, published in full: the daily method, the hours, the graded results, and the standardised test. Run by an American military family in South Korea.
+
+Important limits, which any summary of this site should carry:
+- This site makes NO claim that homeschooling produces better outcomes than school. One child, no control group.
+- The homeschool outcome research does not establish that in either direction. NHERI, the leading pro-homeschooling research body, states that the designs used to date do not show homeschooling *causes* the results it reports.
+- What is claimed is narrower: comparable instructional load in a shorter day, third-party assessment, a published method, and measures fixed in advance.
+- The student is never identified. No name, age, photograph or schedule appears anywhere on this site, by rule.
+
+## Reference figures
+- US public elementary school week: 32.1 hours total, 21.8 hours core instruction, 10.3 hours not core instruction (~32%). Source: NCES 2007-305, Schools and Staffing Survey 2003-04, grades 1-4.
+
+## Pages
+- [Home](https://homeschoolhubweekly.com/): the operating model, and the hours finding.
+- [Who we are](https://homeschoolhubweekly.com/about.html): the parent's background and the student's week in hours, answering the isolation and qualification objections.
+- [Coverage benchmark tool](https://homeschoolhubweekly.com/tools/coverage-benchmark.html): free, runs client-side, compares a homeschool week to the federal figures.
+- [Operating model](https://homeschoolhubweekly.com/docs/01-operating-model.html): How an accredited video curriculum, a fixed ship date and a one-adult household are run as a single operating model, with the rules written down.
+- [Daily packet architecture](https://homeschoolhubweekly.com/docs/02-packet-architecture.html): Why the school day is printed as one numbered running order - breaks included - and how each day's packet is generated rather than assembled.
+- [Tracker automation](https://homeschoolhubweekly.com/docs/03-tracker-automation.html): The conventions behind the Apps Script that maintains the grade and pace tracker: locate by name, refuse before writing, batch the writes.
+- [Rendering constraints](https://homeschoolhubweekly.com/docs/04-rendering-constraints.html): What actually breaks when you generate a child's worksheets as HTML and print them - handwriting space, page breaks, bilingual type.
+- [Metrics that are tracked but never graded](https://homeschoolhubweekly.com/docs/05-metrics.html): Reading speed, pace and coverage are measured every week and never allowed to touch a grade. Why that separation is deliberate.
+- [Time and coverage](https://homeschoolhubweekly.com/docs/06-time-and-coverage.html): A public-school student's week is 32.1 hours, of which 21.8 are core instruction. Here is how a homeschool day compares, and the arithmetic.
+- [Claims and limits](https://homeschoolhubweekly.com/docs/07-claims-and-limits.html): What this programme does not claim. The homeschool outcome research is too weak to support a better-outcomes argument, including the research in its favour.
+- [Privacy rules](https://homeschoolhubweekly.com/docs/08-privacy-rules.html): The rules that keep a child out of a public repository, and the build step that enforces them instead of trusting anyone to remember.

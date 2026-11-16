@@ -1,0 +1,5 @@
+# Everything here is meant to be read, indexed and quoted.
+User-agent: *
+Allow: /
+
+Sitemap: https://homeschoolhubweekly.com/sitemap.xml
