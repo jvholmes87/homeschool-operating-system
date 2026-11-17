@@ -30,21 +30,23 @@ TITLES = {
 
 CHARTS = {
  "cost-year": lambda: chart.bars(
-    [("This program", 5178, True),
-     ("US public school (average)", 16560, False),
+    [("Average US homeschool", 1295, False),
+     ("This program", 5178, True),
+     ("US microschool (average)", 8239, False),
+     ("US public school", 16560, False),
      ("ICS Pyeongtaek", 20163, False),
-     ("ICS Pyeongtaek + bus", 22634, False),
-     ("ICSP, first year", 25905, False),
-     ("Osan Elementary", 26676, False),
-     ("Osan Elementary (non-fed)", 27600, False)],
+     ("Osan Elementary", 26676, False)],
     "What one school year costs, per child",
-    "Our figure is documented below. The others come from published tuition "
-    "memoranda and NCES. The US public school bar is taxpayer cost, not a bill "
-    "any family receives."),
+    "The US public school bar is taxpayer cost, not a bill any family receives. "
+    "Everything else is what a family pays. Our figure is documented below; the "
+    "others come from HSLDA, the National Microschooling Center, NCES, ICSP's "
+    "published tuition schedule, and the DoWEA tuition memorandum."),
 
  "cost-month": lambda: chart.bars(
-    [("This program", 432, True),
-     ("US public school (average)", 1380, False),
+    [("Average US homeschool", 108, False),
+     ("This program", 432, True),
+     ("US microschool (average)", 687, False),
+     ("US public school", 1380, False),
      ("ICS Pyeongtaek", 1680, False),
      ("Osan Elementary", 2223, False)],
     "The same thing, per month",

@@ -68,7 +68,9 @@ on a page like this, so we left it that way.
 
 | Option | Per year | Per month | Multiple of ours | Who pays |
 |---|---|---|---|---|
+| Average US homeschool, elementary | $1,295 | $108 | 0.25× | The family |
 | **This program** | **$5,178** | **$432** | — | The family |
+| US microschool, average cost per student | $8,239 | $687 | 1.6× | The family |
 | US public school, national average per pupil | $16,560 | $1,380 | 3.2× | Taxpayers |
 | International Christian School Pyeongtaek, recurring | $20,163 | $1,680 | 3.9× | The family |
 | ICSP, recurring, with the bus | $22,634 | $1,886 | 4.4× | The family |
@@ -126,6 +128,38 @@ writing, by the school.
 The two rates differ by whether a family is "federally connected." Which
 category applies to a separated veteran is DoWEA's determination, not ours, so
 both are printed above.
+
+### Microschools and learning pods
+
+A microschool is the thing this program would become if four more families
+joined it: a small group, a rented room, one adult running the day, kids working
+through their own coursework.
+
+The National Microschooling Center surveyed 800 of them across all fifty states
+and DC. What they charge:
+
+| Annual tuition | Share of microschools |
+|---|---|
+| Under $5,000 | 26% |
+| $5,000 – $10,000 | 48% |
+| $10,000 – $15,000 | 16% |
+| $15,000 – $20,000 | 5% |
+| Over $20,000 | 5% |
+
+Three quarters charge $10,000 or less, and about 65% offer sliding-scale tuition
+or discounts. The median cost of educating one child is **$6,500**; the average
+total cost per student is **$8,239**.
+
+So a microschool costs roughly **60% more** than this program.
+
+The reason is the whole reason, and it is worth saying plainly: **a microschool
+pays an adult.** Our $5,178 buys materials, tutoring and shipping. It does not
+buy anybody's time, because the time is mine and I do not invoice for it. Put a
+salary in and the gap closes immediately.
+
+That is the same forgone-income point made at the bottom of this page, in a form
+you can price. A microschool is what this program costs when somebody has to be
+paid to run it.
 
 ### The private option
 
@@ -192,6 +226,8 @@ the point of use.
 - Air Force Youth Programs, Osan AB, family account statement
 - NCES, current expenditures per pupil, FY2023 — $16,560 national, in FY23 dollars
 - HSLDA, 2024 survey of 4,000+ homeschooling families — $1,295 average, elementary
+- National Microschooling Center, *American Microschools: A Sector Analysis* (May
+  2025), survey of 800 microschools across 50 states and DC; 2026 cost update
 
 Underlying documents are held by the family. Those relating to the student's own
 records are not published, per `docs/08-privacy-rules.md`.
