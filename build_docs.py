@@ -10,6 +10,7 @@ Run after editing any doc:    python3 build_docs.py
 """
 import pathlib, re, sys
 import markdown
+import chart
 from leak_scan import scan
 
 HERE = pathlib.Path(__file__).parent
@@ -25,6 +26,29 @@ TITLES = {
     "07-claims-and-limits":     "Claims and limits",
     "08-privacy-rules":         "Privacy rules",
     "09-what-it-costs":         "What it costs",
+}
+
+CHARTS = {
+ "cost-year": lambda: chart.bars(
+    [("This program", 5178, True),
+     ("US public school (average)", 16560, False),
+     ("ICS Pyeongtaek", 20163, False),
+     ("ICS Pyeongtaek + bus", 22634, False),
+     ("ICSP, first year", 25905, False),
+     ("Osan Elementary", 26676, False),
+     ("Osan Elementary (non-fed)", 27600, False)],
+    "What one school year costs, per child",
+    "Our figure is documented below. The others come from published tuition "
+    "memoranda and NCES. The US public school bar is taxpayer cost, not a bill "
+    "any family receives."),
+
+ "cost-month": lambda: chart.bars(
+    [("This program", 432, True),
+     ("US public school (average)", 1380, False),
+     ("ICS Pyeongtaek", 1680, False),
+     ("Osan Elementary", 2223, False)],
+    "The same thing, per month",
+    "Annual cost spread over twelve months."),
 }
 
 TEMPLATE = """<!doctype html>
@@ -165,6 +189,21 @@ for src in sorted(DOCS.glob("*.md")):
         label = TITLES.get(ref, ref.replace("-", " "))
         return '<a href="%s.html">%s</a>' % (ref, label)
     body = re.sub(r"<code>(?:docs/)?(\d\d-[a-z0-9-]+)\.md</code>", linkify, body)
+
+    # {{chart:name}} -> inline SVG. A marker with no registered chart is a
+    # build failure, not a silently empty hole in the page.
+    for marker in re.findall(r"\{\{chart:([a-z0-9-]+)\}\}", body):
+        if marker not in CHARTS:
+            problems.append(slug + ": unknown chart \"" + marker + "\"")
+            continue
+        body = body.replace("{{chart:" + marker + "}}", CHARTS[marker]())
+    # markdown wraps the marker in <p>; a <figure> inside a <p> is invalid and
+    # browsers will close the paragraph early, orphaning the caption.
+    body = re.sub(r'<p>\s*(<figure class="chart")', r'\1', body)
+    body = body.replace("</figure></p>", "</figure>")
+    if r"\1>" in body:
+        problems.append(slug + ": chart unwrap regex failed - literal backreference in output")
+
 
     title = TITLES.get(slug, slug.replace("-", " "))
     blurb = BLURBS.get(slug)

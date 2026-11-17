@@ -7,6 +7,8 @@ costs **$26,676**, and the US government calculated that figure itself.
 Every number below traces to an invoice, a published tuition memorandum, or a
 named federal statistic. Where a figure is an estimate, it says so.
 
+{{chart:cost-year}}
+
 ---
 
 ## "Free" is the wrong word
@@ -73,6 +75,8 @@ on a page like this, so we left it that way.
 | ICSP, first year, all-in | $25,905 | $2,159 | 5.0× | The family |
 | **Osan Elementary School, federally connected** | **$26,676** | **$2,223** | **5.2×** | The family |
 | Osan Elementary School, non-federally connected | $27,600 | $2,300 | 5.3× | The family |
+
+{{chart:cost-month}}
 
 Monthly figures are the annual cost spread across twelve months, which is how a
 household actually feels it. The schools themselves bill differently — ICSP

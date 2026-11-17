@@ -141,3 +141,16 @@ hr{border:0;border-top:1px solid var(--line);margin:38px 0}
 footer{margin-top:64px;border-top:1px solid var(--line);background:#fff}
 footer .wrap{padding-top:28px;padding-bottom:40px}
 footer p{font-size:14.5px;color:var(--muted);margin:0 0 10px}
+
+/* charts — inline SVG, no library, no network */
+.chart{margin:30px 0 34px;padding:0}
+.chart svg{display:block;max-width:100%;height:auto}
+.chart figcaption{margin-top:10px;font-size:14px;color:var(--muted);line-height:1.5}
+.chart .cnote{display:block;margin-top:3px;font-size:13px;color:#8a8378}
+.chart path{transition:opacity .12s}
+.chart:hover path{opacity:.82}
+.chart path:hover{opacity:1}
+@media (max-width:620px){
+  .chart svg{font-size:15px}
+  .chart figcaption{font-size:13.5px}
+}
