@@ -37,6 +37,8 @@ are free to us. That turns out to be the most useful thing we have to report.
 | Scouting | **$0.00** | Annual dues covered by troop cookie sales |
 | **Total** | **$5,178.11** | |
 
+That is **$431.51 a month**, spread across the year.
+
 Two of those deserve a sentence.
 
 **Scouting is genuinely free**, and not because anyone waived a fee. The troop
@@ -62,15 +64,20 @@ on a page like this, so we left it that way.
 
 ## What the alternatives cost
 
-| Option | Per year | Multiple of ours | Who pays |
-|---|---|---|---|
-| **This program** | **$5,178** | — | The family |
-| US public school, national average per pupil | $16,560 | 3.2× | Taxpayers |
-| International Christian School Pyeongtaek, recurring | $20,163 | 3.9× | The family |
-| ICSP, recurring, with the bus | $22,634 | 4.4× | The family |
-| ICSP, first year, all-in | $25,905 | 5.0× | The family |
-| **Osan Elementary School, federally connected** | **$26,676** | **5.2×** | The family |
-| Osan Elementary School, non-federally connected | $27,600 | 5.3× | The family |
+| Option | Per year | Per month | Multiple of ours | Who pays |
+|---|---|---|---|---|
+| **This program** | **$5,178** | **$432** | — | The family |
+| US public school, national average per pupil | $16,560 | $1,380 | 3.2× | Taxpayers |
+| International Christian School Pyeongtaek, recurring | $20,163 | $1,680 | 3.9× | The family |
+| ICSP, recurring, with the bus | $22,634 | $1,886 | 4.4× | The family |
+| ICSP, first year, all-in | $25,905 | $2,159 | 5.0× | The family |
+| **Osan Elementary School, federally connected** | **$26,676** | **$2,223** | **5.2×** | The family |
+| Osan Elementary School, non-federally connected | $27,600 | $2,300 | 5.3× | The family |
+
+Monthly figures are the annual cost spread across twelve months, which is how a
+household actually feels it. The schools themselves bill differently — ICSP
+monthly over the school year, the DoD school in two payments tied to the federal
+fiscal year — so these are for comparison, not a payment schedule.
 
 ### The Department of War Education Activity rate
 
