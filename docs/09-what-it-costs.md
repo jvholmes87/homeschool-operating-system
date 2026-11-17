@@ -183,6 +183,99 @@ international school.** $26,676 against $20,163.
 
 ---
 
+## Where the money actually goes
+
+A fair question about any cost comparison is whether the models are even buying
+the same thing. They are not.
+
+{{chart:cost-breakdown}}
+
+| | Our spend | Share |
+|---|---|---|
+| Tutoring academy — math and Korean | $1,707 | 33% |
+| Sports and scouting | $1,666 | 32% |
+| Curriculum and accredited enrollment | $1,455 | 28% |
+| Shipping and printing | $350 | 7% |
+
+**Curriculum is 28% of our budget.** The other 72% buys a specialist teaching
+math three days a week, two volleyball programs, and the postage to get graded
+work to Florida.
+
+Which answers the obvious question about the $1,295 national average. That
+figure, from HSLDA's 2024 survey of more than 4,000 families, is not a
+curriculum-only number — the survey asked households to total curriculum,
+supplies, co-op fees, online class tuition, transportation, lessons, sports and
+tutoring in a single estimate. Same categories we track.
+
+So the comparison is honest, and the finding is this: **our curriculum line
+alone, $1,455, is larger than the average family's entire education budget.**
+We spend four times the average because we buy an accredited enrollment with
+third-party grading, and because we pay for enrichment most families either do
+without or get free through a co-op.
+
+A microschool inverts the ratio again. Microschools report spending a median of
+$6,500 to educate one child, of which **curriculum is a few hundred dollars** —
+about two in five spend at least $600 per student on curricular materials, and
+most spend less. The remaining nine tenths is staff, space and food.
+
+Stack the three up and a pattern falls out:
+
+| | Total | Of which curriculum | Mostly buys |
+|---|---|---|---|
+| Average US homeschool | $1,295 | most of it | materials |
+| **This program** | **$5,178** | **$1,455 (28%)** | **services and instruction** |
+| US microschool | $8,239 | a few hundred | adults and a building |
+
+**The more a model costs, the less of it is curriculum.** Teaching material is
+cheap and has been for years. What costs money is people's time and the room
+they stand in. We pay for part of that — a tutor three days a week — and absorb
+the rest by not paying ourselves.
+
+## What tax relief is available
+
+Not tax advice, and worth taking to someone who files your return. The figures
+below are what the statutes and published rates say.
+
+**Federally: nothing.** Ordinary homeschool expenses are not deductible on a
+federal return. Teaching your own child is treated as a family choice, not a
+business expense or a charitable act.
+
+**Louisiana is the exception, and this household is a Louisiana domicile.**
+Under R.S. 47:297.11 the state allows a deduction of 50% of qualified
+educational expenses per dependent, capped since 2024 at $6,000 of deduction per
+child. Note what that is: a deduction from taxable income, not a credit.
+
+Louisiana now has a flat 3% income tax, which makes the arithmetic short:
+
+| | Amount |
+|---|---|
+| Our qualifying spend | $5,178 |
+| Deduction at 50% | $2,589 |
+| Tax saved at 3% | **about $78** |
+| Most the deduction can ever be worth | about $180 |
+
+The most generous homeschool tax deduction in the country is worth roughly
+**$78 a year** at our level of spending, and about $180 to anyone who spends
+$12,000 or more. It is real, it is worth claiming, and it is not a reason to
+choose or reject homeschooling.
+
+**Education savings accounts are the thing that actually moves money.**
+Louisiana's LA GATOR program pays $5,243 per eligible student for 2026-27,
+$7,626 for families at or below 250% of the federal poverty line, and up to
+$15,253 for students with a documented disability. That is not a deduction, it
+is a funded account — enough to cover this entire program.
+
+Three caveats that matter more than the headline:
+
+- **It is rationed.** Over 39,000 students applied in the program's first year
+  and roughly 6,000 were funded. Eligibility does not mean an award.
+- **It is incompatible with registered home study.** A GATOR participant cannot
+  simultaneously be in a BESE-registered home study program, which has knock-on
+  effects for state scholarship eligibility later.
+- **It requires being in Louisiana.** This family is not, so none of it applies
+  to the figures on this page. It is recorded here because it will apply to
+  families reading this who are.
+
 ## What this page does not show
 
 **It does not show that homeschooling is cheap.** The average American
@@ -226,6 +319,8 @@ the point of use.
 - Air Force Youth Programs, Osan AB, family account statement
 - NCES, current expenditures per pupil, FY2023 — $16,560 national, in FY23 dollars
 - HSLDA, 2024 survey of 4,000+ homeschooling families — $1,295 average, elementary
+- Louisiana Department of Revenue, School Expense Deduction; R.S. 47:297.11
+- Louisiana Department of Education, LA GATOR Scholarship Program, 2026-27 awards
 - National Microschooling Center, *American Microschools: A Sector Analysis* (May
   2025), survey of 800 microschools across 50 states and DC; 2026 cost update
 

@@ -42,6 +42,16 @@ CHARTS = {
     "others come from HSLDA, the National Microschooling Center, NCES, ICSP's "
     "published tuition schedule, and the DoWEA tuition memorandum."),
 
+ "cost-breakdown": lambda: chart.bars(
+    [("Tutoring academy", 1707, True),
+     ("Sports and scouting", 1666, True),
+     ("Curriculum and enrollment", 1455, True),
+     ("Shipping and printing", 350, True)],
+    "Where our $5,178 goes",
+    "Curriculum is barely a quarter of it. The average US homeschooling family "
+    "spends $1,295 on everything combined - almost exactly what we spend on "
+    "curriculum alone."),
+
  "cost-month": lambda: chart.bars(
     [("Average US homeschool", 108, False),
      ("This program", 432, True),
