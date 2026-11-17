@@ -8,17 +8,17 @@ Form choice follows the data's job. The cost comparison is an EMPHASIS chart:
 one bar is the point, the rest are context. One accent hue plus a de-emphasis
 gray, never a rainbow of categories.
 
-Palette validated against the site surface #fdfbf7:
-  CVD separation dE 14.4 (protan) / 17.7 (tritan), normal-vision dE 18.2,
-  both marks >= 3:1 contrast. The chroma-floor check does not apply - the gray
-  is meant to read as gray.
+Palette (2026-11 redesign) against the site surface #f9f9f7:
+  accent #2f5d3a 7.3:1, context gray #73716a 4.6:1; white bar labels on
+  either mark >= 4.5:1. Accent and gray differ in lightness, not hue alone,
+  so the emphasis bar survives greyscale and colorblindness.
 """
 
-ACCENT = "#1c5f7a"   # the bar that is the point
-GRAY   = "#8a8378"   # context bars
-INK    = "#23201c"
-MUTED  = "#6b665e"
-LINE   = "#e4ddd2"
+ACCENT = "#2f5d3a"   # the bar that is the point
+GRAY   = "#73716a"   # context bars
+INK    = "#1a1a1a"
+MUTED  = "#5f5f58"
+LINE   = "#d9d7cf"
 
 def esc(s):
     return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
@@ -47,7 +47,7 @@ def bars(rows, caption, note="", unit="$", width=720, bar_h=22, gap=16,
         f'<figure class="chart">'
         f'<svg viewBox="0 0 {width} {height}" width="100%" height="{height}" '
         f'role="img" aria-label="{esc(caption)}" '
-        f'xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif">'
+        f'xmlns="http://www.w3.org/2000/svg" font-family="\'Source Sans 3\',-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif">'
     )
     # gridlines - hairline, solid, recessive, behind the marks
     ticks = 4
@@ -99,7 +99,7 @@ def segmented(parts, caption, note="", width=720, bar_h=28, unit=""):
     out = [f'<figure class="chart">'
            f'<svg viewBox="0 0 {width} {height}" width="100%" height="{height}" '
            f'role="img" aria-label="{esc(caption)}" xmlns="http://www.w3.org/2000/svg" '
-           f'font-family="-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif">']
+           f'font-family="\'Source Sans 3\',-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif">']
     x = 0.0
     for label, value, color in parts:
         w = inner * value / total

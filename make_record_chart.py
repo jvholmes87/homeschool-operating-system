@@ -28,11 +28,12 @@ SUBJECTS = [
     ("Writing",        [83, 80, 79]),
 ]
 
-INK, MUTED, LINE = "#23201c", "#5f5a52", "#e4ddd2"
-# Chart marks use a more saturated teal than the site's link color: the link
-# teal measures 0.078 chroma, under the 0.10 floor, and reads grey as a mark.
-# Both of these pass the palette validator against this page's surface.
-RISE, FALL = "#0b6f96", "#c2410c"
+INK, MUTED, LINE = "#1a1a1a", "#5f5f58", "#d9d7cf"
+# Falling subjects are marked in the site's warning red, rising or flat ones
+# in ink: the two differ strongly in lightness (16.5:1 vs 6.2:1 on the paper),
+# so the split survives greyscale and colorblindness, and every panel also
+# states its change in text.
+RISE, FALL = "#1a1a1a", "#b3261e"
 
 YMIN, YMAX = 75, 100          # shared scale; floor sits below every data point
 COLS = 4
