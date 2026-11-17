@@ -26,6 +26,8 @@ US public elementary, grades 1–4, from the federal Schools and Staffing Survey
 | Student school week | 32.1 |
 | **Not core instruction** | **10.3 (32% of the week)** |
 
+{{chart:school-week}}
+
 Nationally the average student spends about **1,231 hours in school per year**, and the
 same body of research finds interruptions and teacher absence cost a meaningful slice of
 that — roughly 97 hours a year in one district study.

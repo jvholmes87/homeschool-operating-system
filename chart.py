@@ -79,3 +79,49 @@ def bars(rows, caption, note="", unit="$", width=720, bar_h=22, gap=16,
                + (f' <span class="cnote">{esc(note)}</span>' if note else '')
                + '</figcaption></figure>')
     return "\n".join(out)
+
+
+def segmented(parts, caption, note="", width=720, bar_h=28, unit=""):
+    """
+    One whole split into parts. Tall segmented bar: 28px and never more, each
+    part its own block with 4px corners, a 2px surface gap doing the
+    separating, its share printed inside at the leading edge. No baseline, so
+    no end is square. The legend names the parts in block order.
+
+    parts: list of (label, value, color)
+    """
+    total = sum(v for _, v, _ in parts)
+    gap = 2
+    legend_h = 30
+    height = bar_h + legend_h + 14
+    inner = width - gap * (len(parts) - 1)
+
+    out = [f'<figure class="chart">'
+           f'<svg viewBox="0 0 {width} {height}" width="100%" height="{height}" '
+           f'role="img" aria-label="{esc(caption)}" xmlns="http://www.w3.org/2000/svg" '
+           f'font-family="-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif">']
+    x = 0.0
+    for label, value, color in parts:
+        w = inner * value / total
+        share = 100.0 * value / total
+        out.append(f'<rect x="{x:.1f}" y="0" width="{w:.1f}" height="{bar_h}" rx="4" '
+                   f'fill="{color}"><title>{esc(label)}: {value}{unit} ({share:.0f}%)</title></rect>')
+        txt = f'{value}{unit}'
+        # only print inside when it genuinely fits with padding on both sides
+        if w > len(txt) * 8.2 + 20:
+            out.append(f'<text x="{x + 11:.1f}" y="{bar_h*0.69:.1f}" fill="#ffffff" '
+                       f'font-size="13.5" font-weight="700">{txt}</text>')
+        x += w + gap
+
+    # legend, block order, naming what the blocks are
+    lx = 0.0
+    for label, value, color in parts:
+        out.append(f'<rect x="{lx:.1f}" y="{bar_h + 17}" width="10" height="10" rx="2" fill="{color}"/>')
+        out.append(f'<text x="{lx + 16:.1f}" y="{bar_h + 26}" fill="{INK}" font-size="13">'
+                   f'{esc(label)}</text>')
+        lx += 16 + len(label) * 7.1 + 28
+    out.append('</svg>')
+    out.append(f'<figcaption>{esc(caption)}'
+               + (f' <span class="cnote">{esc(note)}</span>' if note else '')
+               + '</figcaption></figure>')
+    return "\n".join(out)

@@ -4,8 +4,8 @@ This program costs **$5,178 a year**. The cheapest schooling actually available
 to this family costs **$20,163**. The school on the installation ten minutes away
 costs **$26,676**, and the US government calculated that figure itself.
 
-Every number below traces to an invoice, a published tuition memorandum, or a
-named federal statistic. Where a figure is an estimate, it says so.
+Every number here came off an invoice, a signed tuition memorandum, or a federal
+statistics table. Where a figure is a guess, it says so.
 
 {{chart:cost-year}}
 
@@ -13,16 +13,17 @@ named federal statistic. Where a figure is an estimate, it says so.
 
 ## "Free" is the wrong word
 
-Most cost comparisons put public school at zero. That is not true in any useful
-sense — it is simply a bill paid somewhere the family does not see it. A public
-school seat costs real money, somebody pays for it, and the people paying include
-the family, through taxes, whether or not their child ever sits in it.
+Most cost comparisons put public school at zero.
 
-So this page reports **what a year of school costs**, and states **who pays**
-rather than pretending the question away.
+Public school is not free. It costs about $16,560 a year per student. You pay for
+it in property tax and income tax, every year, whether or not your child ever
+sits in one of those seats. The bill just doesn't arrive with your name on it.
 
-For this family the distinction collapses anyway, because none of the options
-are free to us. That turns out to be the most useful thing we have to report.
+So this page does two things: it says what a year of school costs, and it says
+who writes the check.
+
+For us the question is simpler than that. Nobody is offering us a free seat. The
+school on the installation sent us a price.
 
 ---
 
@@ -48,16 +49,15 @@ sells cookies, and the proceeds cover the annual membership. It is the only line
 on this page that costs nothing, and it costs nothing because of work the kids
 did.
 
-**$200 a year to mail homework** is what being overseas adds. An accredited
-program requires original graded papers to reach the school four times a year
-by a fixed date. From an APO that is an overnight international shipment each
-time. A family in Ohio pays for stamps.
+**$200 a year to mail homework.** Four times a year the original graded papers
+have to reach Pensacola by a deadline. From an APO box that means FedEx
+overnight, $50 a shipment. A family in Ohio buys a stamp.
 
 Abeka ships materials *to* us at no charge, so the shipping cost runs one
 direction only.
 
-**What is not counted:** paper, binders and toner beyond the ink line; the
-printer itself, which the household already owned and also uses for a business.
+**Not counted:** paper, binders, and the printer itself, which was already in
+the house and also prints invoices for a business.
 Counting the full ink cost against school rather than splitting it with the
 business overstates our cost slightly. That is the safe direction to be wrong in
 on a page like this, so we left it that way.
@@ -87,10 +87,10 @@ fiscal year — so these are for comparison, not a payment schedule.
 
 ### The Department of War Education Activity rate
 
-The DoD school system — renamed the Department of War Education Activity, still
-widely known as DoDEA — publishes a tuition rate each year for students who are
-not entitled to attend free. For School Year 2026–2027, in Europe, the Pacific
-and Cuba, **full-day pre-K and grades 1–6**:
+Every year the DoD school system — renamed the Department of War Education
+Activity, still called DoDEA by everyone — publishes what it charges a student
+who is not entitled to a free seat. For 2026–2027, in Europe, the Pacific and
+Cuba, **full-day pre-K through grade 6**:
 
 | | Annual | Semester | Quarter |
 |---|---|---|---|
@@ -104,13 +104,16 @@ number is built:
 > and tuition rates are calculated using a full cost recovery methodology in
 > compliance with Government Accountability Office (GAO) guidance.
 
-That sentence is why this page leads with the figure. **$26,676 is not a market
-price or an advocacy estimate. It is the US government's own full-cost
-calculation of one elementary school seat for one year**, computed to GAO
-standards and signed by a comptroller. The same memorandum describes tuition as
-"a debt owed to the U.S. Government."
+Read that again. The government worked out what one seat in that school costs
+to run for a year, checked the arithmetic against GAO rules, and a comptroller
+signed her name to it.
 
-Anyone who says public school is free is welcome to read it.
+**$26,676.**
+
+Nobody is selling anything. That is the cost, on federal letterhead. The same
+memo calls unpaid tuition "a debt owed to the U.S. Government," which is a
+reminder that somebody always pays — usually you, through taxes, for a seat your
+child may never use.
 
 ### Why that rate applies to us
 
@@ -178,8 +181,8 @@ in the area, for 2026–2027, grade 4:
 | First-year Capital Development Fee, non-refundable, KRW 3,000,000 | $2,246.05 |
 | **First year, all in, with the bus** | **$25,905.42** |
 
-Note what that means: **the DoD school costs more than the private
-international school.** $26,676 against $20,163.
+Which produces an odd result worth sitting with: **the DoD school costs more
+than the private international school.** $26,676 against $20,163.
 
 ---
 
@@ -302,19 +305,22 @@ So the claim is not that homeschooling saves money. It is narrower and harder to
 argue with: *we spend well above what the average homeschooling family spends,
 and it still costs a fifth of the school down the road.*
 
-**It does not count a parent's time.** The largest real cost of homeschooling is
-the income a parent does not earn while teaching. It is absent from every line
-above, it is absent from most published homeschool cost figures, and it is the
-single biggest reason a cost comparison like this one can mislead. A family
-weighing this decision should put their own number on it.
+**It does not count a parent's time.** Somebody has to be in the room. That
+person is not at a job, and the wages they don't earn are the biggest cost of
+homeschooling by a wide margin. No line above contains it. Most published
+homeschool cost figures leave it out too, which is why they all look cheap.
 
-**It is one family, one year, one country.** Costs here are shaped by being
-American, overseas, and not entitled to a DoD school seat. A family in Ohio
-faces a completely different set of options, most of which are genuinely free at
-the point of use.
+A microschool charges $8,239 partly because it has to pay that person. We charge
+ourselves nothing. Put your own hourly rate on it before deciding this is a
+bargain.
 
-**Currency.** KRW figures are converted at **1 USD = 1,335.68 KRW**, the rate on
-16 November 2026. The won moves; the conversions do not update themselves.
+**It is one family, one year, one country.** We are American, we live overseas,
+and we are not entitled to a DoD school seat. Change any one of those and the
+page comes out differently. A family in Ohio has a free school four blocks
+away.
+
+**Currency.** Won figures use **1 USD = 1,335.68 KRW**, the rate on 16 November
+2026. The won moves. These numbers do not.
 
 ---
 

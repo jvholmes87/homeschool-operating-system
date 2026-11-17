@@ -42,6 +42,15 @@ CHARTS = {
     "others come from HSLDA, the National Microschooling Center, NCES, ICSP's "
     "published tuition schedule, and the DoWEA tuition memorandum."),
 
+ "school-week": lambda: chart.segmented(
+    [("Core instruction", 21.8, chart.ACCENT),
+     ("Everything else", 10.3, chart.GRAY)],
+    "A US public elementary school week: 32.1 hours",
+    "English, math, social studies and science account for 21.8 hours. The "
+    "other 10.3 are lunch, recess, transitions, attendance, assemblies and "
+    "lining up. NCES, Schools and Staffing Survey, grades 1-4.",
+    unit=" hrs"),
+
  "cost-breakdown": lambda: chart.bars(
     [("Tutoring academy", 1707, True),
      ("Sports and scouting", 1666, True),
