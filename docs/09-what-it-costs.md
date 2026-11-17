@@ -240,10 +240,13 @@ below are what the statutes and published rates say.
 federal return. Teaching your own child is treated as a family choice, not a
 business expense or a charitable act.
 
-**Louisiana is the exception, and this household is a Louisiana domicile.**
-Under R.S. 47:297.11 the state allows a deduction of 50% of qualified
-educational expenses per dependent, capped since 2024 at $6,000 of deduction per
-child. Note what that is: a deduction from taxable income, not a credit.
+**Louisiana is the exception, and this is a Louisiana household** — New Orleans
+resident, filing a Louisiana return. Under R.S. 47:297.11 the state allows a
+deduction of 50% of qualified educational expenses per dependent, capped since
+2024 at $6,000 of deduction per child. Note what that is: a deduction from
+taxable income, not a credit. The qualifying categories include curriculum,
+supplies, tutoring and educational technology, so most of what is listed at the
+top of this page counts.
 
 Louisiana now has a flat 3% income tax, which makes the arithmetic short:
 
@@ -256,8 +259,13 @@ Louisiana now has a flat 3% income tax, which makes the arithmetic short:
 
 The most generous homeschool tax deduction in the country is worth roughly
 **$78 a year** at our level of spending, and about $180 to anyone who spends
-$12,000 or more. It is real, it is worth claiming, and it is not a reason to
-choose or reject homeschooling.
+$12,000 or more. We claim it. It is real, it is worth the ten minutes, and it
+is not a reason to choose or reject homeschooling.
+
+That is the honest shape of homeschool tax relief in America: one state with a
+deduction worth less than a tank of fuel, and forty-five with nothing at all.
+Anyone telling you the tax treatment makes homeschooling cheap is selling
+something.
 
 **Education savings accounts are the thing that actually moves money.**
 Louisiana's LA GATOR program pays $5,243 per eligible student for 2026-27,
@@ -272,9 +280,13 @@ Three caveats that matter more than the headline:
 - **It is incompatible with registered home study.** A GATOR participant cannot
   simultaneously be in a BESE-registered home study program, which has knock-on
   effects for state scholarship eligibility later.
-- **It requires being in Louisiana.** This family is not, so none of it applies
-  to the figures on this page. It is recorded here because it will apply to
-  families reading this who are.
+- **The student has to be in Louisiana.** Domicile and residence are different
+  things. This household files as Louisiana resident, which is what the
+  deduction turns on, but the child is schooled overseas — and GATOR money moves
+  quarterly through approved providers for education actually delivered. We have
+  not claimed GATOR and do not assume we could. It is recorded here because it
+  decides the arithmetic for most Louisiana families reading this, and because
+  it will decide ours if we move back.
 
 ## What this page does not show
 
