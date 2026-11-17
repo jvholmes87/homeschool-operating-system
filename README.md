@@ -6,7 +6,7 @@ Built and operated for **Abeka Academy Grade 4 Accredited Video**, 2026–27. Th
 repository documents the operating model, the document-generation pipeline and the
 spreadsheet automation — the method, not the coursework.
 
-The curriculum is named because that is a fact about this programme and because other
+The curriculum is named because that is a fact about this program and because other
 Abeka families should be able to find this. **None of Abeka's content is reproduced
 here** — no word lists, quiz items, answer keys, grading tables or lesson text. Those are
 Pensacola Christian College's and are deliberately absent. Naming a curriculum you use and
@@ -38,7 +38,7 @@ The program has hard requirements, and the consequences of missing them are not 
 | Tests opened, proctored and stored by the home teacher only | Accreditation integrity |
 | No retakes, ever | A bad score is permanent |
 | Home teacher signs a verification statement each period | The signature is the audit |
-| Minimum programme length | Finishing early banks nothing |
+| Minimum program length | Finishing early banks nothing |
 
 One parent is simultaneously **teacher, proctor, registrar and QA**, usually while holding
 a job. The default tooling is a paper planner and memory, and it fails in a specific way:
@@ -68,9 +68,9 @@ the marker present or recorded and sent to him. A supervisor never guesses at a 
 
 ### The week, not just the school day
 
-The programme is not the whole of the student's week, and a model that ignores the rest of
+The program is not the whole of the student's week, and a model that ignores the rest of
 it is not describing anything real. Reported as **hours by category** — never as days,
-times, named organisations or locations, because this is a public document about a child:
+times, named organizations or locations, because this is a public document about a child:
 
 | | Hours per week |
 |---|---|
@@ -120,7 +120,7 @@ docs/
   01-operating-model.md       roles, document split, the house-rule boundary
   02-packet-architecture.md   what a daily packet contains and why
   03-tracker-automation.md    Apps Script patterns, and the bugs that taught them
-  04-rendering-constraints.md WeasyPrint behaviour discovered the hard way
+  04-rendering-constraints.md WeasyPrint behavior discovered the hard way
   05-metrics.md               tracked-but-not-graded measures, and honest flags
   06-time-and-coverage.md     measured hours against a public elementary benchmark
   07-claims-and-limits.md     what this claims, what it does not, and what gets reported
@@ -128,7 +128,7 @@ docs/
 tools/
   coverage-benchmark.html     "are we doing enough hours?" - self-contained, sends nothing
 generators/
-  style.css                   shared stylesheet: page, type, subject colour system
+  style.css                   shared stylesheet: page, type, subject color system
   packet.py                   student packet -> A4 PDF
   teacher_sheet.py            bilingual supervisor sheet -> A4 PDF
   sample_data.py              INVENTED student and word list
@@ -245,7 +245,7 @@ the second is the honest number.
 ## Outcomes
 
 **Operational** outcomes over the first grading period. These are facts about running the
-programme, not evidence that the model produces better learning — see
+program, not evidence that the model produces better learning — see
 [`docs/07-claims-and-limits.md`](docs/07-claims-and-limits.md).
 
 - A grading period that had slipped roughly two weeks was re-baselined and brought back

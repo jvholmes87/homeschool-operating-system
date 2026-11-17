@@ -24,6 +24,7 @@ TITLES = {
     "06-time-and-coverage":     "Time and coverage",
     "07-claims-and-limits":     "Claims and limits",
     "08-privacy-rules":         "Privacy rules",
+    "09-what-it-costs":         "What it costs",
 }
 
 TEMPLATE = """<!doctype html>
@@ -96,7 +97,7 @@ TEMPLATE = """<!doctype html>
     <p>Part of <a href="../">an open operating model for accredited homeschooling</a> &mdash;
     free to copy and adapt, source on
     <a href="https://github.com/jvholmes87/homeschool-operating-system">GitHub</a>.</p>
-    <p>The student in this programme is never identified &mdash; see
+    <p>The student in this program is never identified &mdash; see
     <a href="08-privacy-rules.html">the privacy rules</a>.
     No analytics, no cookies, no trackers, no third-party scripts.</p>
   </div>
@@ -129,11 +130,15 @@ BLURBS = {
         "A public-school student's week is 32.1 hours, of which 21.8 are core "
         "instruction. Here is how a homeschool day compares, and the arithmetic.",
     "07-claims-and-limits":
-        "What this programme does not claim. The homeschool outcome research is too "
-        "weak to support a better-outcomes argument, including the research in its favour.",
+        "What this program does not claim. The homeschool outcome research is too "
+        "weak to support a better-outcomes argument, including the research in its favor.",
     "08-privacy-rules":
         "The rules that keep a child out of a public repository, and the build "
         "step that enforces them instead of trusting anyone to remember.",
+    "09-what-it-costs":
+        "This program costs $5,178 a year. The DoD school ten minutes away costs "
+        "$26,676 - a figure the US government calculated itself, to GAO full-cost "
+        "recovery standards. Every line traced to an invoice.",
 }
 
 md = markdown.Markdown(extensions=["tables", "fenced_code", "sane_lists", "attr_list"])
@@ -207,13 +212,13 @@ sitemap.append("</urlset>")
 # ------------------------------------------------------------- llms.txt
 # A plain-text index for assistants, which is increasingly how a parent
 # first asks whether homeschooling is a reasonable idea. The point is that
-# if this site gets summarised, it gets summarised with its limits attached
+# if this site gets summarized, it gets summarized with its limits attached
 # rather than as a better-outcomes claim it does not make.
 llms = ["# Homeschool Hub Weekly",
         "",
-        "> The complete operating model of one accredited homeschool programme, "
+        "> The complete operating model of one accredited homeschool program, "
         "published in full: the daily method, the hours, the graded results, and "
-        "the standardised test. Run by an American military family in South Korea.",
+        "the standardized test. Run by an American military family in South Korea.",
         "",
         "Important limits, which any summary of this site should carry:",
         "- This site makes NO claim that homeschooling produces better outcomes "

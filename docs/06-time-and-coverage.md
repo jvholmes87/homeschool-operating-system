@@ -7,7 +7,7 @@ see `07-claims-and-limits.md` for why not.
 total breaks, and the tracker holds every graded result.
 
 **Enrichment hours are estimated** and labelled as such throughout. They are the
-programme owner's figures for session lengths, not logged times. Treat the core column as
+program owner's figures for session lengths, not logged times. Treat the core column as
 evidence and the enrichment column as a good-faith estimate until it is logged the same way.
 
 ---
@@ -35,7 +35,7 @@ not core instruction.** Transitions, lining up, attendance, assemblies, and the 
 moving 25 children through a building. None of it is wasted exactly, but none of it is
 instruction either.
 
-## This programme
+## This program
 
 **Abeka Academy Grade 4 Accredited Video** — 170 video lessons across four grading
 periods, with tests and exams graded by the accrediting body rather than by the parent.
@@ -55,8 +55,8 @@ Read it as *comparable*, not *equal*.
 
 ## Enrichment
 
-Structured, scheduled activity outside the core programme. Reported **as hours by category**
-— not as days, times, named organisations or locations, because this is a public document
+Structured, scheduled activity outside the core program. Reported **as hours by category**
+— not as days, times, named organizations or locations, because this is a public document
 about a specific child.
 
 *Estimated, not logged — see the note at the top.*
@@ -77,8 +77,8 @@ structured time with peers.
 | | Hours per week |
 |---|---|
 | Public elementary, in school | 32.1 — of which 21.8 is core instruction |
-| This programme, core instruction | 19.6 – 26.7 |
-| This programme, core + enrichment | **34.6 – 47.2 structured** |
+| This program, core instruction | 19.6 – 26.7 |
+| This program, core + enrichment | **34.6 – 47.2 structured** |
 
 **Core instruction is comparable.** The difference is what fills the rest of the week:
 about 10 hours of non-instructional school time, against 15–20 hours of chosen academic
@@ -93,14 +93,14 @@ The most common objection to homeschooling is social isolation. The research doe
 support the objection in either direction — reviewers find no evidence of help or harm, and
 say so because the studies are too weak to conclude anything.
 
-What this programme can report is a schedule: **roughly 7 hours a week of structured peer
-activity across scouting and two sports programmes, plus 3 sessions a week in a classroom
+What this program can report is a schedule: **roughly 7 hours a week of structured peer
+activity across scouting and two sports programs, plus 3 sessions a week in a classroom
 with other children.** Five days a week this student is in a room with other kids doing
-something organised.
+something organized.
 
 That is not evidence about socialization outcomes. It is evidence that the *scheduling*
 objection — that a homeschooled child has no structured peer contact — does not describe
-this programme. Those are different claims and the weaker one is the defensible one.
+this program. Those are different claims and the weaker one is the defensible one.
 
 ## Flexibility, concretely
 
@@ -108,7 +108,7 @@ The things the schedule can absorb that a fixed timetable cannot:
 
 - **A subject can run at the student's actual level.** Mathematics here runs well above
   grade level because there is nothing forcing it to the median of a class.
-- **Work can move sites.** The mathematics work-text is done at a tutoring centre three days
+- **Work can move sites.** The mathematics work-text is done at a tutoring center three days
   a week; the home packets carry only the video lessons and the graded instruments. The
   split is documented so neither site duplicates or drops the other's work.
 - **A bad day can be re-dated instead of lost.** When a grading period slipped two weeks, it

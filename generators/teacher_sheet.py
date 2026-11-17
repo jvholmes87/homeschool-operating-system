@@ -6,7 +6,7 @@ Bilingual supervisor sheet -> A4 PDF.
 
 Every line appears in both languages. This is the operating document for
 whoever runs the school day, not a courtesy translation, so nothing is
-summarised in the second language.
+summarized in the second language.
 
 Korean needs Noto Sans CJK KR installed, or every glyph renders as tofu:
   /usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc

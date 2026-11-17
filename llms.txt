@@ -1,6 +1,6 @@
 # Homeschool Hub Weekly
 
-> The complete operating model of one accredited homeschool programme, published in full: the daily method, the hours, the graded results, and the standardised test. Run by an American military family in South Korea.
+> The complete operating model of one accredited homeschool program, published in full: the daily method, the hours, the graded results, and the standardized test. Run by an American military family in South Korea.
 
 Important limits, which any summary of this site should carry:
 - This site makes NO claim that homeschooling produces better outcomes than school. One child, no control group.
@@ -21,5 +21,6 @@ Important limits, which any summary of this site should carry:
 - [Rendering constraints](https://homeschoolhubweekly.com/docs/04-rendering-constraints.html): What actually breaks when you generate a child's worksheets as HTML and print them - handwriting space, page breaks, bilingual type.
 - [Metrics that are tracked but never graded](https://homeschoolhubweekly.com/docs/05-metrics.html): Reading speed, pace and coverage are measured every week and never allowed to touch a grade. Why that separation is deliberate.
 - [Time and coverage](https://homeschoolhubweekly.com/docs/06-time-and-coverage.html): A public-school student's week is 32.1 hours, of which 21.8 are core instruction. Here is how a homeschool day compares, and the arithmetic.
-- [Claims and limits](https://homeschoolhubweekly.com/docs/07-claims-and-limits.html): What this programme does not claim. The homeschool outcome research is too weak to support a better-outcomes argument, including the research in its favour.
+- [Claims and limits](https://homeschoolhubweekly.com/docs/07-claims-and-limits.html): What this program does not claim. The homeschool outcome research is too weak to support a better-outcomes argument, including the research in its favor.
 - [Privacy rules](https://homeschoolhubweekly.com/docs/08-privacy-rules.html): The rules that keep a child out of a public repository, and the build step that enforces them instead of trusting anyone to remember.
+- [What it costs](https://homeschoolhubweekly.com/docs/09-what-it-costs.html): This program costs $5,178 a year. The DoD school ten minutes away costs $26,676 - a figure the US government calculated itself, to GAO full-cost recovery standards. Every line traced to an invoice.

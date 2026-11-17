@@ -1,6 +1,6 @@
 # 08 — Privacy rules for this repository
 
-Binding on every file here and on anything published from it. The student in this programme
+Binding on every file here and on anything published from it. The student in this program
 is a minor. These rules are not editorial preference.
 
 ## The student is never identified
@@ -9,7 +9,7 @@ is a minor. These rules are not editorial preference.
 - **No age or date of birth.** "Upper elementary" is the limit — not the year, not the
   birthday, not "she turns ten this month".
 - **No photographs**, of her or of her work in her handwriting.
-- **No school-issued identifiers** — account numbers, student IDs, enrolment numbers.
+- **No school-issued identifiers** — account numbers, student IDs, enrollment numbers.
 
 Her grades and hours are published. Her identity is not. The practical effect is that her
 record never surfaces in a search for her name, which is the part that follows her into
@@ -22,7 +22,7 @@ who already knows her; it is that nothing here is indexed against her name.
 ## Schedules are never publishable. Region is.
 
 What locates a child is not a place on its own. It is a **place plus a time plus a way to
-recognise her**. Any two of those three are inert; all three together are the safety
+recognize her**. Any two of those three are inert; all three together are the safety
 problem, however ordinary the activity.
 
 So the rule is drawn around the combination, not around the word "location":
@@ -30,12 +30,12 @@ So the rule is drawn around the combination, not around the word "location":
 | Never publish | Publish instead |
 |---|---|
 | Days, times, or recurring schedule of any activity | hours per week |
-| Named organisations, troop or unit numbers | the category: "scouting", "a Korean sports club" |
+| Named organizations, troop or unit numbers | the category: "scouting", "a Korean sports club" |
 | Addresses, specific facilities, the academy or club she attends | the region, and the category of place |
 | Her name or photograph alongside *any* of the above | neither, ever |
 
 **Region is published deliberately** — the country, and the installation whose community
-this family is part of. That was a considered change, not a slip. The programme's entire
+this family is part of. That was a considered change, not a slip. The program's entire
 shape is a consequence of being an overseas military family: the ship-by-mail deadlines,
 the time-zone gap with the school, the *hagwon* in the middle of a school week, the base
 scouting and youth-sports infrastructure doing the socialisation work. Strip the region out

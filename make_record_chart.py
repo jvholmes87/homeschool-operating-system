@@ -11,7 +11,7 @@ subject on a SHARED y-scale keeps the comparison honest and lets a subject that
 only exists in later years simply have a shorter line.
 
 Colour carries trend direction, and never alone - every panel states its change
-in text, so the chart survives greyscale, colourblindness and forced-colours.
+in text, so the chart survives greyscale, colorblindness and forced-colors.
 
     python3 make_record_chart.py        writes _chart.svg fragment to stdout
 """
@@ -29,7 +29,7 @@ SUBJECTS = [
 ]
 
 INK, MUTED, LINE = "#23201c", "#5f5a52", "#e4ddd2"
-# Chart marks use a more saturated teal than the site's link colour: the link
+# Chart marks use a more saturated teal than the site's link color: the link
 # teal measures 0.078 chroma, under the 0.10 floor, and reads grey as a mark.
 # Both of these pass the palette validator against this page's surface.
 RISE, FALL = "#0b6f96", "#c2410c"
@@ -70,7 +70,7 @@ def panel(name, vals, ox, oy):
     o = ['<g transform="translate(%g,%g)">' % (ox, oy)]
     o.append('<text x="0" y="12" class="pname">%s</text>' % name)
     if label:
-        # trend stated in text, so colour is never the only cue
+        # trend stated in text, so color is never the only cue
         o.append('<text x="%g" y="12" class="ptrend %s" text-anchor="end">%s</text>'
                  % (PX + PLW, "fall" if falling else "rise", label))
 
@@ -121,7 +121,7 @@ def chart_svg():
 
 
 def letter(v):
-    """Abeka's 10-point scale, from docs - the same table the programme grades on."""
+    """Abeka's 10-point scale, from docs - the same table the program grades on."""
     for lo, lab in ((98, "A+"), (93, "A"), (90, "A-"), (87, "B+"), (83, "B"),
                     (80, "B-"), (77, "C+"), (73, "C"), (70, "C-"), (67, "D+"),
                     (60, "D")):
