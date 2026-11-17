@@ -254,6 +254,18 @@ for p in sorted(DOCS.glob("*.md")):
 
 print("wrote sitemap.xml (%d urls), robots.txt, llms.txt" % len(urls))
 
+# ------------------------------------------------- orphan check
+# A doc that nothing links to is invisible. It will sit in the sitemap and
+# llms.txt looking fine while no human browsing the site can ever reach it.
+# That happened once, to the cost page, and the only reason it surfaced was
+# someone going to look for it. Fail the build instead.
+home = (HERE / "index.html").read_text()
+linked = set(re.findall(r'docs/(\d\d-[a-z0-9-]+)\.html', home))
+for p in sorted(DOCS.glob("*.md")):
+    if p.stem not in linked:
+        problems.append(p.stem + ": NOT LINKED from index.html - it would be "
+                        "published but unreachable by anyone browsing the site")
+
 if problems:
     print("PROBLEMS:"); [print("  " + p) for p in problems]; sys.exit(1)
 print("no problems found")
