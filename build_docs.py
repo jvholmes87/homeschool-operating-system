@@ -31,7 +31,7 @@ TITLES = {
 CHARTS = {
  "cost-year": lambda: chart.bars(
     [("Average US homeschool", 1295, False),
-     ("This program", 5178, True),
+     ("Our homeschool", 5178, True),
      ("US microschool (average)", 8239, False),
      ("US public school", 16560, False),
      ("ICS Pyeongtaek", 20163, False),
@@ -63,7 +63,7 @@ CHARTS = {
 
  "cost-month": lambda: chart.bars(
     [("Average US homeschool", 108, False),
-     ("This program", 432, True),
+     ("Our homeschool", 432, True),
      ("US microschool (average)", 687, False),
      ("US public school", 1380, False),
      ("ICS Pyeongtaek", 1680, False),
@@ -118,12 +118,13 @@ TEMPLATE = """<!doctype html>
 </head>
 <body>
 
-<header class="top">
+<header class="top" id="top">
   <div class="wrap">
     <a class="brand" href="../">Homeschool Hub <span>Weekly</span></a>
     <nav>
       <a href="../record.html">The record</a>
       <a href="../tools/coverage-benchmark.html">Hours check</a>
+      <a href="../docs/09-what-it-costs.html">What it costs</a>
       <a href="../about.html">Who we are</a>
       <a href="../#method">The method</a>
     </nav>
@@ -142,11 +143,12 @@ TEMPLATE = """<!doctype html>
     <p>Part of <a href="../">an open operating model for accredited homeschooling</a> &mdash;
     free to copy and adapt, source on
     <a href="https://github.com/jvholmes87/homeschool-operating-system">GitHub</a>.</p>
-    <p>The student in this program is never identified &mdash; see
+    <p>The student in our homeschool is never identified &mdash; see
     <a href="08-privacy-rules.html">the privacy rules</a>.
     No analytics, no cookies, no trackers, no third-party scripts.</p>
   </div>
 </footer>
+<a class="totop" href="#top" aria-label="Back to top">&uarr;</a>
 
 </body>
 </html>
@@ -175,13 +177,13 @@ BLURBS = {
         "A public-school student's week is 32.1 hours, of which 21.8 are core "
         "instruction. Here is how a homeschool day compares, and the arithmetic.",
     "07-claims-and-limits":
-        "What this program does not claim. The homeschool outcome research is too "
+        "What our homeschool does not claim. The homeschool outcome research is too "
         "weak to support a better-outcomes argument, including the research in its favor.",
     "08-privacy-rules":
         "The rules that keep a child out of a public repository, and the build "
         "step that enforces them instead of trusting anyone to remember.",
     "09-what-it-costs":
-        "This program costs $5,178 a year. The DoD school ten minutes away costs "
+        "Our homeschool costs $5,178 a year. The DoD school ten minutes away costs "
         "$26,676 - a figure the US government calculated itself, to GAO full-cost "
         "recovery standards. Every line traced to an invoice.",
 }

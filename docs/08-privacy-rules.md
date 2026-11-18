@@ -1,6 +1,6 @@
 # 08 — Privacy rules for this repository
 
-Binding on every file here and on anything published from it. The student in this program
+Binding on every file here and on anything published from it. The student in our homeschool
 is a minor. These rules are not editorial preference.
 
 ## The student is never identified

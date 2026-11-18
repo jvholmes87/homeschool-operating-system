@@ -6,7 +6,7 @@ Built and operated for **Abeka Academy Grade 4 Accredited Video**, 2026–27. Th
 repository documents the operating model, the document-generation pipeline and the
 spreadsheet automation — the method, not the coursework.
 
-The curriculum is named because that is a fact about this program and because other
+The curriculum is named because that is a fact about our homeschool and because other
 Abeka families should be able to find this. **None of Abeka's content is reproduced
 here** — no word lists, quiz items, answer keys, grading tables or lesson text. Those are
 Pensacola Christian College's and are deliberately absent. Naming a curriculum you use and

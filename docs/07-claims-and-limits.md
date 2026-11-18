@@ -42,7 +42,7 @@ Four things, all of them checkable:
    is here. The failure modes are here. Someone else can run it.
 2. **Core instructional load is comparable to a public elementary school's, in a shorter
    day.** Measured, not estimated — see `06-time-and-coverage.md`.
-3. **The scheduling objection does not describe this program.** Roughly 7 hours a week of
+3. **The scheduling objection does not describe our homeschool.** Roughly 7 hours a week of
    structured peer activity plus three classroom sessions a week. That is a claim about a
    calendar, not about social development.
 4. **Assessment is third-party.** The accrediting body grades the tests. The parent does not
@@ -54,7 +54,7 @@ Point 4 is the one that matters most, and it is the one the literature keeps ask
 
 Every critique of homeschool research names the same four defects:
 
-| Defect | This program |
+| Defect | Our homeschool |
 |---|---|
 | Self-selected samples | Still true. N=1, and the family chose this. **Unresolved.** |
 | Self-reported test scores | **Resolved.** An accrediting body grades and records. |
@@ -73,7 +73,7 @@ Tests, and accredited enrollment includes one free test per enrollment year. Eit
 percentile against a national sample, which is the only figure in this entire project that
 means anything to someone outside it.
 
-**This program uses Iowa Form E**, and the reason is the comparison group rather than the
+**Our homeschool uses Iowa Form E**, and the reason is the comparison group rather than the
 test's reputation. Iowa's 2024 norms are built from roughly 4.6 million student records
 weighted to federal enrollment data — constructed to represent US students generally.
 Stanford 10's 2018 re-norming drew more heavily on private schools, where earlier editions

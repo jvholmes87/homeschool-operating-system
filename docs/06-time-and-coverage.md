@@ -37,7 +37,7 @@ not core instruction.** Transitions, lining up, attendance, assemblies, and the 
 moving 25 children through a building. None of it is wasted exactly, but none of it is
 instruction either.
 
-## This program
+## Our homeschool
 
 **Abeka Academy Grade 4 Accredited Video** — 170 video lessons across four grading
 periods, with tests and exams graded by the accrediting body rather than by the parent.
@@ -79,8 +79,8 @@ structured time with peers.
 | | Hours per week |
 |---|---|
 | Public elementary, in school | 32.1 — of which 21.8 is core instruction |
-| This program, core instruction | 19.6 – 26.7 |
-| This program, core + enrichment | **34.6 – 47.2 structured** |
+| Our homeschool, core instruction | 19.6 – 26.7 |
+| Our homeschool, core + enrichment | **34.6 – 47.2 structured** |
 
 **Core instruction is comparable.** The difference is what fills the rest of the week:
 about 10 hours of non-instructional school time, against 15–20 hours of chosen academic
@@ -95,14 +95,14 @@ The most common objection to homeschooling is social isolation. The research doe
 support the objection in either direction — reviewers find no evidence of help or harm, and
 say so because the studies are too weak to conclude anything.
 
-What this program can report is a schedule: **roughly 7 hours a week of structured peer
+What our homeschool can report is a schedule: **roughly 7 hours a week of structured peer
 activity across scouting and two sports programs, plus 3 sessions a week in a classroom
 with other children.** Five days a week this student is in a room with other kids doing
 something organized.
 
 That is not evidence about socialization outcomes. It is evidence that the *scheduling*
 objection — that a homeschooled child has no structured peer contact — does not describe
-this program. Those are different claims and the weaker one is the defensible one.
+our homeschool. Those are different claims and the weaker one is the defensible one.
 
 ## Flexibility, concretely
 

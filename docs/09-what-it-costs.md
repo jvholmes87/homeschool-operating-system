@@ -1,6 +1,6 @@
 # What it costs
 
-This program costs **$5,178 a year**. The cheapest schooling actually available
+Our homeschool costs **$5,178 a year**. The cheapest schooling actually available
 to this family costs **$20,163**. The school on the installation ten minutes away
 costs **$26,676**, and the US government calculated that figure itself.
 
@@ -69,7 +69,7 @@ on a page like this, so we left it that way.
 | Option | Per year | Per month | Multiple of ours | Who pays |
 |---|---|---|---|---|
 | Average US homeschool, elementary | $1,295 | $108 | 0.25× | The family |
-| **This program** | **$5,178** | **$432** | — | The family |
+| **Our homeschool** | **$5,178** | **$432** | — | The family |
 | US microschool, average cost per student | $8,239 | $687 | 1.6× | The family |
 | US public school, national average per pupil | $16,560 | $1,380 | 3.2× | Taxpayers |
 | International Christian School Pyeongtaek, recurring | $20,163 | $1,680 | 3.9× | The family |
@@ -134,7 +134,7 @@ both are printed above.
 
 ### Microschools and learning pods
 
-A microschool is the thing this program would become if four more families
+A microschool is the thing our homeschool would become if four more families
 joined it: a small group, a rented room, one adult running the day, kids working
 through their own coursework.
 
@@ -153,7 +153,7 @@ Three quarters charge $10,000 or less, and about 65% offer sliding-scale tuition
 or discounts. The median cost of educating one child is **$6,500**; the average
 total cost per student is **$8,239**.
 
-So a microschool costs roughly **60% more** than this program.
+So a microschool costs roughly **60% more** than our homeschool.
 
 The reason is the whole reason, and it is worth saying plainly: **a microschool
 pays an adult.** Our $5,178 buys materials, tutoring and shipping. It does not
@@ -161,7 +161,7 @@ buy anybody's time, because the time is mine and I do not invoice for it. Put a
 salary in and the gap closes immediately.
 
 That is the same forgone-income point made at the bottom of this page, in a form
-you can price. A microschool is what this program costs when somebody has to be
+you can price. A microschool is what our homeschool costs when somebody has to be
 paid to run it.
 
 ### The private option
@@ -226,7 +226,7 @@ Stack the three up and a pattern falls out:
 | | Total | Of which curriculum | Mostly buys |
 |---|---|---|---|
 | Average US homeschool | $1,295 | most of it | materials |
-| **This program** | **$5,178** | **$1,455 (28%)** | **services and instruction** |
+| **Our homeschool** | **$5,178** | **$1,455 (28%)** | **services and instruction** |
 | US microschool | $8,239 | a few hundred | adults and a building |
 
 **The more a model costs, the less of it is curriculum.** Teaching material is
@@ -296,7 +296,7 @@ Three caveats that matter more than the headline:
 **It does not show that homeschooling is cheap.** The average American
 homeschooling family spends about $1,295 a year on an elementary student,
 according to a 2024 survey of more than 4,000 families by the Home School Legal
-Defense Association. This program costs **four times that**. We buy an
+Defense Association. Our homeschool costs **four times that**. We buy an
 accredited enrollment with graded transcripts, and we pay a tutoring academy
 three days a week. A family doing this on library books and free curriculum
 would spend a fraction of what we spend.

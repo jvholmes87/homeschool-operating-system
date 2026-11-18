@@ -94,16 +94,22 @@
   .note { font-size:14px; color:var(--muted); }
   footer { margin-top:56px; font-size:14px; color:var(--muted); border-top:1px solid var(--ink); padding-top:18px; }
   a { color:var(--you); }
+  .totop { position:fixed; right:20px; bottom:20px; width:46px; height:46px; display:flex;
+           align-items:center; justify-content:center; background:#fff; color:var(--ink);
+           border:1px solid var(--ink); border-radius:50%; font:500 20px/1 var(--mono);
+           text-decoration:none; box-shadow:0 2px 6px rgba(0,0,0,.2); }
+  .totop:hover { color:#fff; background:var(--you); border-color:var(--you); }
 </style>
 </head>
 <body>
 
-<header class="top">
+<header class="top" id="top">
   <div>
     <a class="brand" href="../">Homeschool Hub <span>Weekly</span></a>
     <nav>
       <a href="../record.html">The record</a>
       <a href="coverage-benchmark.html">Hours check</a>
+      <a href="../docs/09-what-it-costs.html">What it costs</a>
       <a href="../about.html">Who we are</a>
       <a href="../#method">The method</a>
     </nav>
@@ -181,6 +187,7 @@ an accredited homeschool program, free to copy and adapt. See
 <a href="https://github.com/jvholmes87/homeschool-operating-system">GitHub</a>, MIT licensed.</p>
 <p>No data leaves this page. Save the file and it still works offline.</p>
 </footer>
+<a class="totop" href="#top" aria-label="Back to top">&uarr;</a>
 
 </main>
 <script>
