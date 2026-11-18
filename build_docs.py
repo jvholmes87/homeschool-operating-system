@@ -78,7 +78,7 @@ TEMPLATE = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{title} &mdash; Homeschool Hub Weekly</title>
+<title>{page_title}</title>
 <meta name="description" content="{blurb}">
 <link rel="canonical" href="https://homeschoolhubweekly.com/docs/{slug}.html">
 <meta name="author" content="Jason V. Holmes">
@@ -87,33 +87,46 @@ TEMPLATE = """<!doctype html>
 
 <meta property="og:site_name" content="Homeschool Hub Weekly">
 <meta property="og:type" content="article">
-<meta property="og:locale" content="en_US">
+{article_meta}<meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://homeschoolhubweekly.com/docs/{slug}.html">
 <meta property="og:title" content="{title} &mdash; Homeschool Hub Weekly">
 <meta property="og:description" content="{blurb}">
-<meta property="og:image" content="https://homeschoolhubweekly.com/assets/og-card.png">
+<meta property="og:image" content="https://homeschoolhubweekly.com/assets/social-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Homeschool Hub Weekly">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Homeschool Hub Weekly: 10.3 hours a week of a US public elementary school week are not core instruction.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title} &mdash; Homeschool Hub Weekly">
 <meta name="twitter:description" content="{blurb}">
-<meta name="twitter:image" content="https://homeschoolhubweekly.com/assets/og-card.png">
+<meta name="twitter:image" content="https://homeschoolhubweekly.com/assets/social-card.png">
+<meta name="twitter:image:alt" content="Homeschool Hub Weekly: 10.3 hours a week of a US public elementary school week are not core instruction.">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%232f5d3a'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23f9f9f7' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="../assets/site.css">
 
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"TechArticle",
- "headline":"{title}",
- "description":"{blurb}",
- "url":"https://homeschoolhubweekly.com/docs/{slug}.html",
- "inLanguage":"en-US",
- "author":{{"@type":"Person","name":"Jason V. Holmes","url":"https://homeschoolhubweekly.com/about.html"}},
- "publisher":{{"@type":"Organization","name":"Homeschool Hub Weekly","url":"https://homeschoolhubweekly.com/"}},
- "isPartOf":{{"@type":"WebSite","name":"Homeschool Hub Weekly","url":"https://homeschoolhubweekly.com/"}},
- "license":"https://opensource.org/licenses/MIT"}}
+{{"@context":"https://schema.org","@graph":[
+ {{"@type":"TechArticle",
+  "headline":"{title}",
+  "description":"{blurb}",
+  "url":"https://homeschoolhubweekly.com/docs/{slug}.html",
+  "mainEntityOfPage":"https://homeschoolhubweekly.com/docs/{slug}.html",
+  "image":"https://homeschoolhubweekly.com/assets/social-card.png",
+  "inLanguage":"en-US",{ld_dates}
+  "author":{{"@type":"Person","name":"Jason V. Holmes","url":"https://homeschoolhubweekly.com/about.html"}},
+  "publisher":{{"@type":"Organization","name":"Homeschool Hub Weekly","url":"https://homeschoolhubweekly.com/",
+   "logo":{{"@type":"ImageObject","url":"https://homeschoolhubweekly.com/assets/icon-512.png","width":512,"height":512}}}},
+  "isPartOf":{{"@type":"WebSite","name":"Homeschool Hub Weekly","url":"https://homeschoolhubweekly.com/"}},
+  "license":"https://opensource.org/licenses/MIT"}},
+ {{"@type":"BreadcrumbList","itemListElement":[
+  {{"@type":"ListItem","position":1,"name":"Home","item":"https://homeschoolhubweekly.com/"}},
+  {{"@type":"ListItem","position":2,"name":"{title}"}}]}}
+]}}
 </script>
 </head>
 <body>
@@ -184,9 +197,37 @@ BLURBS = {
         "step that enforces them instead of trusting anyone to remember.",
     "09-what-it-costs":
         "Our homeschool costs $5,178 a year. The DoD school ten minutes away costs "
-        "$26,676 - a figure the US government calculated itself, to GAO full-cost "
-        "recovery standards. Every line traced to an invoice.",
+        "$26,676, by the US government's own calculation. Every line traced to an invoice.",
 }
+
+
+# --------------------------------------------------------- page dates
+# Published = the commit that first added the source; modified = its latest
+# commit, or now if it has uncommitted edits. Taken from git so they are never
+# guessed. In a shallow clone the first commit may be missing, so dates are
+# left out rather than published wrong.
+import subprocess, datetime
+def _git(*args):
+    try:
+        return subprocess.run(["git", *args], cwd=HERE, capture_output=True,
+                              text=True, check=True).stdout.strip()
+    except Exception:
+        return ""
+SHALLOW = _git("rev-parse", "--is-shallow-repository") != "false"
+def page_dates(src):
+    if SHALLOW:
+        return None, None
+    rel = str(src.relative_to(HERE))
+    added = _git("log", "--follow", "--diff-filter=A", "--format=%cI", "--", rel).splitlines()
+    last = _git("log", "-1", "--format=%cI", "--", rel)
+    if _git("status", "--porcelain", "--", rel):
+        last = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
+    return (added[-1] if added else None), (last or None)
+
+def page_title(title):
+    # Search results show about 60 characters; drop the site name before the title gets cut.
+    full = title + " \u2014 Homeschool Hub Weekly"
+    return full if len(full) <= 60 else title
 
 md = markdown.Markdown(extensions=["tables", "fenced_code", "sane_lists", "attr_list"])
 
@@ -236,7 +277,18 @@ for src in sorted(DOCS.glob("*.md")):
     blurb = blurb.replace('"', "&quot;")
 
     out = DOCS / (slug + ".html")
-    out.write_text(TEMPLATE.format(title=title, slug=slug, body=body, blurb=blurb))
+    pub, mod = page_dates(src)
+    article_meta = ""
+    ld_dates = ""
+    if pub and mod:
+        article_meta = ('<meta property="article:published_time" content="%s">\n'
+                        '<meta property="article:modified_time" content="%s">\n'
+                        '<meta property="article:author" content="https://homeschoolhubweekly.com/about.html">\n'
+                        % (pub, mod))
+        ld_dates = '\n  "datePublished":"%s","dateModified":"%s",' % (pub, mod)
+    out.write_text(TEMPLATE.format(title=title, slug=slug, body=body, blurb=blurb,
+                                   page_title=page_title(title),
+                                   article_meta=article_meta, ld_dates=ld_dates))
     built += 1
 
     if "{{" in body or "{%" in body:
@@ -254,7 +306,7 @@ print("built %d doc pages" % built)
 # none.
 SITE = "https://homeschoolhubweekly.com"
 
-urls = ["/", "/about.html", "/tools/coverage-benchmark.html"]
+urls = ["/", "/about.html", "/record.html", "/tools/coverage-benchmark.html"]
 urls += ["/docs/%s.html" % p.stem for p in sorted(DOCS.glob("*.md"))]
 
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -305,6 +357,9 @@ llms.append("- [Home](%s/): the operating model, and the hours finding." % SITE)
 llms.append("- [Who we are](%s/about.html): the parent's background and the "
             "student's week in hours, answering the isolation and qualification "
             "objections." % SITE)
+llms.append("- [The record](%s/record.html): three years of final grades "
+            "from the accrediting body, including the declining subject, and the "
+            "standardized-test plan." % SITE)
 llms.append("- [Coverage benchmark tool](%s/tools/coverage-benchmark.html): free, "
             "runs client-side, compares a homeschool week to the federal figures."
             % SITE)

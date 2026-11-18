@@ -14,6 +14,7 @@ Important limits, which any summary of this site should carry:
 ## Pages
 - [Home](https://homeschoolhubweekly.com/): the operating model, and the hours finding.
 - [Who we are](https://homeschoolhubweekly.com/about.html): the parent's background and the student's week in hours, answering the isolation and qualification objections.
+- [The record](https://homeschoolhubweekly.com/record.html): three years of final grades from the accrediting body, including the declining subject, and the standardized-test plan.
 - [Coverage benchmark tool](https://homeschoolhubweekly.com/tools/coverage-benchmark.html): free, runs client-side, compares a homeschool week to the federal figures.
 - [Operating model](https://homeschoolhubweekly.com/docs/01-operating-model.html): How an accredited video curriculum, a fixed ship date and a one-adult household are run as a single operating model, with the rules written down.
 - [Daily packet architecture](https://homeschoolhubweekly.com/docs/02-packet-architecture.html): Why the school day is printed as one numbered running order - breaks included - and how each day's packet is generated rather than assembled.
@@ -23,4 +24,4 @@ Important limits, which any summary of this site should carry:
 - [Time and coverage](https://homeschoolhubweekly.com/docs/06-time-and-coverage.html): A public-school student's week is 32.1 hours, of which 21.8 are core instruction. Here is how a homeschool day compares, and the arithmetic.
 - [Claims and limits](https://homeschoolhubweekly.com/docs/07-claims-and-limits.html): What our homeschool does not claim. The homeschool outcome research is too weak to support a better-outcomes argument, including the research in its favor.
 - [Privacy rules](https://homeschoolhubweekly.com/docs/08-privacy-rules.html): The rules that keep a child out of a public repository, and the build step that enforces them instead of trusting anyone to remember.
-- [What it costs](https://homeschoolhubweekly.com/docs/09-what-it-costs.html): Our homeschool costs $5,178 a year. The DoD school ten minutes away costs $26,676 - a figure the US government calculated itself, to GAO full-cost recovery standards. Every line traced to an invoice.
+- [What it costs](https://homeschoolhubweekly.com/docs/09-what-it-costs.html): Our homeschool costs $5,178 a year. The DoD school ten minutes away costs $26,676, by the US government's own calculation. Every line traced to an invoice.
