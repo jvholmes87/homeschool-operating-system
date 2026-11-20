@@ -9,12 +9,12 @@ one bar is the point, the rest are context. One accent hue plus a de-emphasis
 gray, never a rainbow of categories.
 
 Palette (2026-11 redesign) against the site surface #f9f9f7:
-  accent #2f5d3a 7.3:1, context gray #73716a 4.6:1; white bar labels on
+  accent #24552f 8.2:1, context gray #73716a 4.6:1; white bar labels on
   either mark >= 4.5:1. Accent and gray differ in lightness, not hue alone,
   so the emphasis bar survives greyscale and colorblindness.
 """
 
-ACCENT = "#2f5d3a"   # the bar that is the point
+ACCENT = "#24552f"   # the bar that is the point
 GRAY   = "#73716a"   # context bars
 INK    = "#1a1a1a"
 MUTED  = "#5f5f58"

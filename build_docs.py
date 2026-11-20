@@ -95,7 +95,7 @@ TEMPLATE = """<!doctype html>
 <link rel="canonical" href="https://homeschoolhubweekly.com/docs/{slug}.html">
 <meta name="author" content="Jason V. Holmes">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#2f5d3a">
+<meta name="theme-color" content="#24552f">
 
 <meta property="og:site_name" content="Homeschool Hub Weekly">
 <meta property="og:type" content="article">

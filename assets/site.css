@@ -23,7 +23,7 @@
 
 :root{
   --paper:#f9f9f7; --card:#fff; --ink:#1a1a1a; --muted:#5f5f58;
-  --line:#d9d7cf; --accent:#2f5d3a; --accent-dk:#1f3f27; --tint:#eef2ec;
+  --line:#d9d7cf; --accent:#24552f; --accent-dk:#1f3f27; --tint:#eef2ec;
   --warn:#b3261e; --warn-tint:#fbefee;
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
   --sans:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
