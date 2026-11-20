@@ -71,11 +71,13 @@ on a page like this, so we left it that way.
 | Average US homeschool, elementary | $1,295 | $108 | 0.25× | The family |
 | **Our homeschool** | **$5,178** | **$432** | — | The family |
 | US microschool, average cost per student | $8,239 | $687 | 1.6× | The family |
+| Austin ISD, the part that reaches instruction | $8,678 | $723 | 1.7× | Taxpayers |
 | US public school, national average per pupil | $16,560 | $1,380 | 3.2× | Taxpayers |
 | International Christian School Pyeongtaek, recurring | $20,163 | $1,680 | 3.9× | The family |
 | ICSP, recurring, with the bus | $22,634 | $1,886 | 4.4× | The family |
 | ICSP, first year, all-in | $25,905 | $2,159 | 5.0× | The family |
 | **Osan Elementary School, federally connected** | **$26,676** | **$2,223** | **5.2×** | The family |
+| Austin ISD, actually spent per student | $27,580 | $2,298 | 5.3× | Taxpayers |
 | Osan Elementary School, non-federally connected | $27,600 | $2,300 | 5.3× | The family |
 
 {{chart:cost-month}}
@@ -84,6 +86,40 @@ Monthly figures are the annual cost spread across twelve months, which is how a
 household actually feels it. The schools themselves bill differently — ICSP
 monthly over the school year, the DoD school in two payments tied to the federal
 fiscal year — so these are for comparison, not a payment schedule.
+
+### Why Austin ISD is in that table twice
+
+Austin is not a school we could send her to. It is in the table because it is
+the rare district that publishes its whole ledger, so you can see something the
+national average hides: how much of a school budget is school.
+
+In 2024-25 Austin ISD spent **$38,486 per student**. Two things happen to that
+money before any of it reaches a teacher.
+
+About **$10,907 per student leaves Texas's second-largest city entirely**. Texas
+recaptures property tax revenue from districts the state considers wealthy and
+redistributes it. Austin is the largest payer in the state — roughly $777
+million in FY2025, more than 40% of its revenue, more than the next several
+districts combined. The district never gets to spend it on anyone in Austin.
+Take it out and Austin spends **$27,580 per student**, which is the row above.
+
+Another **$11,992 per student is buildings and debt** — construction, and paying
+off the bonds that financed earlier construction. In Texas that comes from a
+separate tax rate voters approve on its own.
+
+What is left for instruction and instruction-related costs is **$8,678 per
+student**.
+
+{{chart:austin-split}}
+
+That $8,678 is a narrow definition. It is a budget function code, and it
+excludes counselors, nurses, librarians, buses and lunch, which most parents
+would call part of school. The two honest numbers are both in the table above:
+$27,580 is what the district spends, $8,678 is what reaches the classroom, and
+our $5,178 sits between them.
+
+We are not claiming the three buy the same thing. We are claiming that only one
+of the three publishes what it costs per child without being asked.
 
 ### The Department of War Education Activity rate
 
@@ -336,6 +372,11 @@ away.
   2026-27*, tuition schedule
 - Air Force Youth Programs, Osan AB, family account statement
 - NCES, current expenditures per pupil, FY2023 — $16,560 national, in FY23 dollars
+- Texas Education Agency, Austin ISD spending and revenue, 2024-25 actual, all
+  funds — $2,781,479,852 total, $38,486 per student; function-code shares as
+  published
+- Austin ISD Budget Office, recapture payments by fiscal year — $777.2M FY2025,
+  $715.5M FY2026 adopted; ~$8.3B paid to the state since FY2001
 - HSLDA, 2024 survey of 4,000+ homeschooling families — $1,295 average, elementary
 - Louisiana Department of Revenue, School Expense Deduction; R.S. 47:297.11
 - Louisiana Department of Education, LA GATOR Scholarship Program, 2026-27 awards

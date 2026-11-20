@@ -33,9 +33,16 @@ def bars(rows, caption, note="", unit="$", width=720, bar_h=22, gap=16,
     """
     plot_w = width - label_w - value_w
     vmax = max(v for _, v, _ in rows)
-    # clean axis top
-    step = 10 ** (len(str(int(vmax))) - 1)
-    top = ((int(vmax) // step) + 1) * step
+    # clean axis top: pick a round step size that puts 3-6 gridlines on the
+    # plot, so the axis ends near the longest bar instead of far past it.
+    mag = 10 ** (len(str(int(vmax))) - 1)
+    step = mag
+    for cand in (mag / 4, mag / 2, mag, mag * 2, mag * 2.5, mag * 5, mag * 10):
+        if 3 <= vmax / cand <= 6:
+            step = cand
+            break
+    ticks = int(-(-vmax // step))          # ceil
+    top = step * ticks
     n = len(rows)
     head_h, foot_h = 8, 34
     height = head_h + n * (bar_h + gap) + foot_h
@@ -50,7 +57,6 @@ def bars(rows, caption, note="", unit="$", width=720, bar_h=22, gap=16,
         f'xmlns="http://www.w3.org/2000/svg" font-family="\'Source Sans 3\',-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif">'
     )
     # gridlines - hairline, solid, recessive, behind the marks
-    ticks = 4
     for i in range(ticks + 1):
         v = top * i / ticks
         gx = x(v)

@@ -51,6 +51,18 @@ CHARTS = {
     "lining up. NCES, Schools and Staffing Survey, grades 1-4.",
     unit=" hrs"),
 
+ "austin-split": lambda: chart.bars(
+    [("Buildings and debt", 11992, False),
+     ("Sent to the state", 10907, False),
+     ("Reaches instruction", 8678, True),
+     ("Other school operations", 6910, False)],
+    "Austin ISD, 2024-25: where $38,486 per student goes",
+    "Instruction and instruction-related spending is the smallest of the four. "
+    "The second bar is recapture - property tax revenue Texas redistributes to "
+    "other districts, which Austin never spends on its own students. Texas "
+    "Education Agency, 2024-25 actual, all funds; per-student figures are the "
+    "published function-code shares applied to $38,486."),
+
  "cost-breakdown": lambda: chart.bars(
     [("Tutoring academy", 1707, True),
      ("Sports and scouting", 1666, True),
