@@ -14,3 +14,10 @@ __pycache__/
 real_data.py
 samples/*.png
 venv/
+
+# Local secrets: templates must contain invented placeholders only.
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
