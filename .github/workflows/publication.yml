@@ -29,11 +29,9 @@ jobs:
         run: |
           set -euo pipefail
           key=.github/security/publication-key.pem
-          if [[ "$GITHUB_EVENT_NAME" == workflow_dispatch || -n "$EXPECTED_SIGNING_KEY_HASH" ]]; then
-            [[ "$EXPECTED_SIGNING_KEY_HASH" =~ ^[0-9a-f]{64}$ ]]
-            actual=$(sha256sum "$key" | cut -d ' ' -f 1)
-            [[ "$actual" == "$EXPECTED_SIGNING_KEY_HASH" ]]
-          fi
+          [[ "$EXPECTED_SIGNING_KEY_HASH" =~ ^[0-9a-f]{64}$ ]]
+          actual=$(sha256sum "$key" | cut -d ' ' -f 1)
+          [[ "$actual" == "$EXPECTED_SIGNING_KEY_HASH" ]]
           python3 site_release.py stage . "$RUNNER_TEMP/site" .github/security/publication-files.txt
           python3 site_release.py verify "$RUNNER_TEMP/site" "$key" .github/security/privacy.sig
       - name: Upload the verified Pages artifact
