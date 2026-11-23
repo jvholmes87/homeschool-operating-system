@@ -1,0 +1,89 @@
+name: Site publication
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - redesign
+      - 'security/publication-*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Publishable site
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Test the publication gate
+        run: python3 -m unittest discover -s .github/security -p test_site_release.py
+      - name: Stage the site and verify the signed privacy review
+        env:
+          EXPECTED_SIGNING_KEY_HASH: ${{ vars.HOMESCHOOL_PUBLICATION_KEY_SHA256 }}
+        run: |
+          set -euo pipefail
+          key=.github/security/publication-key.pem
+          [[ "$EXPECTED_SIGNING_KEY_HASH" =~ ^[0-9a-f]{64}$ ]]
+          actual=$(sha256sum "$key" | cut -d ' ' -f 1)
+          [[ "$actual" == "$EXPECTED_SIGNING_KEY_HASH" ]]
+          python3 site_release.py stage . "$RUNNER_TEMP/site" .github/security/publication-files.txt
+          python3 site_release.py verify "$RUNNER_TEMP/site" "$key" .github/security/privacy.sig
+      - name: Upload the verified Pages artifact
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ${{ runner.temp }}/site
+          include-hidden-files: true
+
+  generator:
+    name: Generator dependencies
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Install the native PDF libraries and locked packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0
+          python -m venv "$RUNNER_TEMP/generators"
+          "$RUNNER_TEMP/generators/bin/python" -m pip install --require-hashes --only-binary=:all: -r requirements-generators.txt
+      - name: Render and extract a synthetic PDF
+        run: |
+          "$RUNNER_TEMP/generators/bin/python" - <<'PY'
+          from io import BytesIO
+          from markdown import markdown
+          from pypdf import PdfReader
+          from weasyprint import HTML
+
+          label = "Synthetic generator validation"
+          pdf = HTML(string=markdown(f"# {label}")).write_pdf()
+          assert label in PdfReader(BytesIO(pdf)).pages[0].extract_text()
+          PY
+
+  deploy:
+    name: Release reviewed site to GitHub Pages
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    needs: [verify, generator]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy the verified artifact
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

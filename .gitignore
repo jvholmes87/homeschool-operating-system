@@ -1,0 +1,23 @@
+
+# Nothing real belongs in this repository.
+# Student records, curriculum content and generated packets live elsewhere.
+# generated output, except the committed samples
+# guard rails: never commit real data
+*.ods
+*.pyc
+*.xlsx
+*_real.py
+.venv/
+/private/
+/students/
+__pycache__/
+real_data.py
+samples/*.png
+venv/
+
+# Local secrets: templates must contain invented placeholders only.
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
